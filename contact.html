@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | SCAR — Stephanie Cardona</title>
+<meta name="description" content="Contact Stephanie &quot;SCAR&quot; Cardona — Honolulu HI · El Paso TX · Los Angeles CA.">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex, nofollow">
+<!-- SPEC CONCEPT — prospect has not signed. Not for deployment. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/brand/scar-logo.webp">
+<link rel="stylesheet" href="styles.css?v=202609161159">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="page-contact">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="top">
+  <a class="bar__mark" href="index.html"><img src="assets/brand/scar-logo-sm.webp" width="200" height="93" alt="scar — home"></a>
+  <nav class="bar__nav" id="site-nav" aria-label="Main">
+    <a href="index.html" data-text="home">home</a>
+    <a href="portfolio.html" data-text="portfolio">portfolio</a>
+    <a href="services.html" data-text="services">services</a>
+    <a href="contact.html" data-text="contact" aria-current="page">contact</a>
+    <a href="https://prettysweetmostlydope.com" target="_blank" rel="noopener" data-text="psmd★">psmd<span class="star">★</span></a>
+  </nav>
+  <a class="bar__cta" href="contact.html">let's work</a>
+  <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="site-nav">menu</button>
+</header>
+
+<main id="main">
+
+<!-- CONTACT -->
+<section class="contact contact--page" aria-labelledby="contact-title">
+  <p class="contact__kicker">got a brief?</p>
+  <h1 class="contact__title" id="contact-title">
+    <a href="mailto:" class="contact__cta">let's work<span aria-hidden="true">→</span></a>
+  </h1>
+  <p class="contact__email"><span class="confirm">[CONFIRM] email address — not yet published</span></p>
+
+  <div class="contact__grid">
+    <form class="form" id="enquiry" novalidate>
+      <div class="form__row">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="form__row">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="form__row">
+        <label for="f-service">What do you need?</label>
+        <select id="f-service" name="service">
+          <option value="">Choose a service</option>
+          <option>Video &amp; Content</option>
+          <option>Marketing Design</option>
+          <option>Branding</option>
+          <option>Websites</option>
+          <option>Social Media</option>
+          <option>Graphic Design</option>
+          <option>Photography</option>
+        </select>
+      </div>
+      <div class="form__row">
+        <label for="f-msg">Tell me about the project</label>
+        <textarea id="f-msg" name="message" rows="6" required></textarea>
+      </div>
+      <button class="btn" type="submit">send it</button>
+      <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <aside class="contact__side">
+      <p class="contact__note">“please allow 24 hours to get back to you”</p>
+      <p class="contact__markets">Honolulu HI <b>·</b> El Paso TX <b>·</b> Los Angeles CA</p>
+      <p class="contact__elsewhere">Instagram — <a href="https://www.instagram.com/scarmosttdope/" target="_blank" rel="noopener">@scarmosttdope</a></p>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<footer class="contact contact--foot">
+  <div class="contact__legal">
+    <span>© SCAR 2026</span>
+    <span class="contact__spec">Spec concept · placeholder slots awaiting real work</span>
+  </div>
+  <div class="contact__word" aria-hidden="true"><img src="assets/brand/scar-logo.webp" width="771" height="360" alt="" loading="lazy" decoding="async"></div>
+</footer>
+
+<script src="script.js?v=202609161159" defer></script>
+</body>
+</html>

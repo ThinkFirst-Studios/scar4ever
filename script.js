@@ -26,8 +26,43 @@
     reveals.forEach(el => io.observe(el));
   }
 
+  // Mobile menu
+  const toggle = document.querySelector('.bar__toggle');
+  const setMenu = open => {
+    bar.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'close' : 'menu';
+  };
+  toggle.addEventListener('click', () => setMenu(!bar.classList.contains('is-open')));
+  document.querySelectorAll('.bar__nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape' && bar.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+  });
+
+  // Enquiry form — mockup only, no handler connected yet
+  const form = document.getElementById('enquiry');
+  if (form) {
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let firstBad = null;
+      form.querySelectorAll('[required]').forEach(f => {
+        const bad = !f.value.trim() || (f.type === 'email' && !f.checkValidity());
+        f.setAttribute('aria-invalid', String(bad));
+        if (bad && !firstBad) firstBad = f;
+      });
+      if (firstBad) {
+        status.textContent = 'Fill in your name, a valid email and a few lines about the project.';
+        firstBad.focus();
+        return;
+      }
+      status.innerHTML = 'Looks good. <span class="confirm">[CONFIRM] form handler — not connected in this mockup</span>';
+    });
+  }
+
   // Masonry: span each piece across enough 8px rows to fit its height
   const grid = document.getElementById('grid');
+  if (!grid) return;
   const pieces = [...grid.querySelectorAll('.piece')];
   const layout = () => {
     const cs = getComputedStyle(grid);
@@ -69,7 +104,7 @@
         }
       }
     });
-    empty.hidden = shown > 0;
+    if (empty) empty.hidden = shown > 0;
     layout();
   }));
 })();

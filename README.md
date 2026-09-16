@@ -5,6 +5,7 @@
 - Brief: `PROMPT.md`
 - Lead tracking: `LEAD-NOTES.md`
 - Preview: open `index.html` (or right-click -> Open with Live Server)
+- Live preview (noindex): https://thinkfirststudios.github.io/scar4ever/
 
 ## Build notes
 
@@ -17,3 +18,17 @@
 - **Work filters:** category tags on each piece are inferred from project names; anything not obvious is marked `[CONFIRM] type`. Templates filter shows an honest empty state — no template work is in her published portfolio.
 - **PSMD** is included in Links with a visible `[CONFIRM] keep in scope?` tag rather than silently dropped.
 - **Not in this mockup (needed for a real build):** commerce / cart, priced services, redirects for her ~10 existing Squarespace URLs. See `PROMPT.md`.
+
+## Pages (matches her live nav: HOME · PORTFOLIO · SERVICES · CONTACT · PSMD★)
+
+| Mockup page | Her current Squarespace URL | Real build |
+|---|---|---|
+| `index.html` | `/` | keep |
+| `portfolio.html` | `/portfolioo` (+ `/graphics`, `/logodesigns`, `/merch-design`, photo page) | redirect all to portfolio |
+| `services.html` | `/designservices` | redirect; commerce decision still open |
+| `contact.html` | `/contact` | keep; form handler `[CONFIRM]` |
+| PSMD★ | external → prettysweetmostlydope.com | keep as external link |
+
+- Header/footer are duplicated across the four pages (no build step). Edit all four when the nav changes.
+- CSS/JS links carry a `?v=` stamp. Bump it on every deploy — GitHub Pages caches CSS for 10 min, and a stale stylesheet with new HTML breaks the grid.
+- Her logo (`images/scar+patch+logo.webp`) replaces the stand-in wordmark font: `assets/brand/`.
