@@ -40,5 +40,6 @@ PSMD★ logo (`assets/psmd/psmd-logo.webp`) includes a childhood photo; Alex con
 Excluded from the site:
 - **Prettysweet Friends plush:** the shirt print is a photo of a young child (no-minors rule).
 - **Kimmie Star case:** Kim Kardashian likeness.
+- **LATTO BBY journal, Mister West journal, FERXXO mouse pad:** celebrity likenesses (Latto, Kanye West, Feid).
 - **NY Feverr case:** New York Yankees "NY" trademark pattern.
 - Ffiti Flower (shown) carries a Chrome Hearts-style horseshoe emblem reading Prettysweet Mostlydope. Worth a look before launch.
