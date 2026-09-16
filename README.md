@@ -36,6 +36,7 @@
 ## PSMD★ products
 
 Source files in `PSMD/` (gitignored); optimized copies in `assets/psmd/`. Cases shown at $40 (per lead research); other prices `[CONFIRM]`.
+PSMD★ logo (`assets/psmd/psmd-logo.webp`) includes a childhood photo; Alex confirmed 2026-09-16 it's OK to use as her brand mark.
 Excluded from the site:
 - **Prettysweet Friends plush:** the shirt print is a photo of a young child (no-minors rule).
 - **Kimmie Star case:** Kim Kardashian likeness.

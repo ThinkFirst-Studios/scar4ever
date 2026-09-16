@@ -26,6 +26,21 @@
     reveals.forEach(el => io.observe(el));
   }
 
+  // Hero: artwork and logo drift with the pointer
+  const hero = document.querySelector('.hero[data-tilt]');
+  if (hero && !reduced && matchMedia('(pointer: fine)').matches) {
+    let raf;
+    hero.addEventListener('pointermove', e => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const r = hero.getBoundingClientRect();
+        hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5).toFixed(3));
+        hero.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5).toFixed(3));
+      });
+    });
+    hero.addEventListener('pointerleave', () => { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
+  }
+
   // Mobile menu
   const toggle = document.querySelector('.bar__toggle');
   const setMenu = open => {
