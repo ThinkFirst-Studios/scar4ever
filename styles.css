@@ -288,9 +288,12 @@ button { font: inherit; color: inherit; }
   /* two columns: tagline + id + logo grouped on the left, artwork on the right */
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    --hero-gap: clamp(40px, 6vw, 140px);
+    --hero-art: min(42vw, calc((100svh - 144px) * .8));
+    grid-template-columns: minmax(0, max-content) auto;
     grid-template-rows: 1fr 1fr;
-    column-gap: clamp(32px, 4vw, 80px);
+    justify-content: center;
+    column-gap: var(--hero-gap);
     row-gap: clamp(20px, 3.5vh, 40px);
     padding: 104px var(--gut) 40px;
   }
@@ -299,7 +302,8 @@ button { font: inherit; color: inherit; }
     position: relative; z-index: 3;
     display: flex; flex-direction: column; gap: .06em;
     margin: 0;
-    font: 400 min(4.2vw, 9.5vh)/1 var(--f-display);
+    /* sized to whatever width the artwork leaves; the longest line is ~9em */
+    font: 400 min(11vh, calc((100vw - 2 * var(--gut) - var(--hero-gap) - var(--hero-art)) / 9.4))/1 var(--f-display);
     letter-spacing: -.02em;
     text-transform: lowercase;
     color: var(--pink);
@@ -328,15 +332,16 @@ button { font: inherit; color: inherit; }
   .hero__media {
     grid-column: 2; grid-row: 1 / span 2; align-self: center;
     position: relative; inset: auto; z-index: 2;
-    height: min(calc(100svh - 144px), 1000px);
+    width: var(--hero-art);
+    max-height: 1000px;
     aspect-ratio: 4 / 5;
-    max-width: 42vw;
     transform: rotate(1.5deg);
     box-shadow: -12px 12px 0 var(--pink), 0 0 80px rgba(255,46,147,.25);
   }
   .hero__scrim { display: none; }
-  .hero__id { flex-direction: row; gap: 24px; }
-  .hero__word img { width: min(30vw, 38vh, 520px); }
+  .hero__id { flex-direction: row; gap: 24px; font-size: clamp(1rem, 1.05vw, 1.375rem); }
+  .hero__word { margin-top: clamp(20px, 4.5vh, 56px); }
+  .hero__word img { width: min(28vw, 44vh, 620px); }
   .hero__cue { z-index: 3; bottom: 16px; }
 }
 
