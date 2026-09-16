@@ -828,6 +828,52 @@ figcaption strong {
   .svc-grid--sessions { grid-template-columns: repeat(7, 1fr); }
 }
 
+/* ---------- PSMD★ shop ---------- */
+.psmd {
+  max-width: 1760px; margin-inline: auto;
+  padding: clamp(4rem, 10vw, 8rem) var(--gut);
+  border-top: 2px solid var(--pink);
+}
+.psmd--page { padding-top: clamp(7rem, 14vw, 10rem); border-top: 0; }
+.psmd__head { margin-bottom: 32px; }
+.psmd__star { color: var(--acid); }
+.psmd__head .display { padding-bottom: .16em; }
+.psmd__lede { margin: 16px 0 0; font-size: 1.25rem; }
+.psmd__lede b { color: var(--pink); }
+.psmd__note { margin: 6px 0 0; color: var(--muted); }
+
+.shop-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 12px;
+}
+.product__link { display: flex; flex-direction: column; gap: 4px; text-decoration: none; }
+.product__media {
+  display: block;
+  margin-bottom: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #222;
+  transition: box-shadow .3s var(--ease), transform .3s var(--ease);
+}
+.product__media img { display: block; width: 100%; height: auto; transition: transform .5s var(--ease); }
+.product__link:hover .product__media { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 var(--pink); }
+.product__link:hover .product__media img { transform: scale(1.05); }
+.product__cat {
+  font: 700 .75rem/1.3 var(--f-body);
+  text-transform: uppercase; letter-spacing: .12em;
+  color: var(--muted);
+}
+.product__name { font: 400 1.05rem/1.2 var(--f-display); }
+.product__foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 2px; }
+.product__price { font: 700 1.125rem/1 var(--f-body); color: var(--acid); }
+.product__go { font-weight: 700; color: var(--pink); transition: transform .2s var(--ease); }
+.product__link:hover .product__go { transform: translate(3px, -3px); }
+
+@media (min-width: 600px)  { .shop-grid { grid-template-columns: repeat(3, 1fr); gap: 32px 16px; } }
+@media (min-width: 1000px) { .shop-grid { grid-template-columns: repeat(4, 1fr); gap: 40px 24px; } }
+
 /* ---------- reveals ---------- */
 .js .reveal {
   opacity: 0;

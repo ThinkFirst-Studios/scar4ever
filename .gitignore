@@ -6,3 +6,4 @@ node_modules/
 
 # source files from SCAR — optimized copies live in assets/
 images/
+PSMD/

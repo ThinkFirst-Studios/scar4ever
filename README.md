@@ -27,8 +27,17 @@
 | `portfolio.html` | `/portfolioo` (+ `/graphics`, `/logodesigns`, `/merch-design`, photo page) | redirect all to portfolio |
 | `services.html` | `/designservices` | redirect; commerce decision still open |
 | `contact.html` | `/contact` | keep; form handler `[CONFIRM]` |
-| PSMD★ | external → prettysweetmostlydope.com | keep as external link |
+| `psmd.html` | external → prettysweetmostlydope.com | PSMD★ product page; each product links to her PSMD store |
 
 - Header/footer are duplicated across the four pages (no build step). Edit all four when the nav changes.
 - CSS/JS links carry a `?v=` stamp. Bump it on every deploy — GitHub Pages caches CSS for 10 min, and a stale stylesheet with new HTML breaks the grid.
 - Her logo (`images/scar+patch+logo.webp`) replaces the stand-in wordmark font: `assets/brand/`.
+
+## PSMD★ products
+
+Source files in `PSMD/` (gitignored); optimized copies in `assets/psmd/`. Cases shown at $40 (per lead research); other prices `[CONFIRM]`.
+Excluded from the site:
+- **Prettysweet Friends plush:** the shirt print is a photo of a young child (no-minors rule).
+- **Kimmie Star case:** Kim Kardashian likeness.
+- **NY Feverr case:** New York Yankees "NY" trademark pattern.
+- Ffiti Flower (shown) carries a Chrome Hearts-style horseshoe emblem reading Prettysweet Mostlydope. Worth a look before launch.
