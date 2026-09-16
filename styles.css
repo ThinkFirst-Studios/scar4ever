@@ -898,6 +898,8 @@ figcaption strong {
 .vision.vision--top { margin: clamp(3.5rem, 8vw, 6rem) 0 clamp(4rem, 9vw, 6rem); padding-top: 0; border-top: 0; }
 .shop-head { padding-top: clamp(2.5rem, 6vw, 4rem); border-top: 2px solid var(--pink); margin-bottom: 28px; }
 .shop-head .svc-group__title { margin-bottom: 8px; }
+.shop-head .filters { margin-top: 20px; }
+.shop-grid .product[hidden] { display: none; }
 .vision {
   margin-top: clamp(4rem, 9vw, 7rem);
   padding-top: clamp(2.5rem, 6vw, 4rem);

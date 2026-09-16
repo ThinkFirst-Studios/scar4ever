@@ -85,6 +85,25 @@
     });
   }
 
+  // PSMD★ shop filters
+  const shopTabs = document.querySelectorAll('[data-shop-filters] button');
+  if (shopTabs.length) {
+    const items = document.querySelectorAll('#shop-grid .product');
+    const shopEmpty = document.getElementById('shop-empty');
+    shopTabs.forEach(btn => btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      shopTabs.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      let shown = 0;
+      items.forEach(it => {
+        const isMore = it.classList.contains('product--more');
+        const match = isMore ? f === 'all' : (f === 'all' || it.dataset.cat === f);
+        it.hidden = !match;
+        if (match) { it.classList.add('is-in'); if (!isMore) shown++; }
+      });
+      shopEmpty.hidden = shown > 0;
+    }));
+  }
+
   // Masonry: span each piece across enough 8px rows to fit its height
   const grid = document.getElementById('grid');
   if (!grid) return;
