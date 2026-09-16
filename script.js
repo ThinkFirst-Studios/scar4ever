@@ -41,6 +41,16 @@
     hero.addEventListener('pointerleave', () => { hero.style.setProperty('--mx', 0); hero.style.setProperty('--my', 0); });
   }
 
+  // Manifesto: each paragraph lights up as it reaches the middle of the screen
+  const lit = document.querySelectorAll('[data-lit] > p');
+  if (lit.length && !reduced && 'IntersectionObserver' in window) {
+    const lo = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('is-lit', e.isIntersecting)),
+      { rootMargin: '-30% 0px -30% 0px' });
+    lit.forEach(p => lo.observe(p));
+  } else {
+    lit.forEach(p => p.classList.add('is-lit'));
+  }
+
   // Mobile menu
   const toggle = document.querySelector('.bar__toggle');
   const setMenu = open => {

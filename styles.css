@@ -556,6 +556,9 @@ figcaption strong {
   transform: rotate(-1.5deg);
 }
 .frame .slot__label { color: var(--pink); }
+.frame--photo { border: 0; background: none; outline: 2px solid var(--pink); outline-offset: 10px; }
+.frame--photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.about__portrait:hover .frame--photo img { transform: scale(1.04); }
 .about__portrait { max-width: 420px; }
 .about__bio { margin: 28px 0 0; font-size: 1.125rem; }
 
@@ -899,7 +902,6 @@ figcaption strong {
   margin-top: clamp(4rem, 9vw, 7rem);
   padding-top: clamp(2.5rem, 6vw, 4rem);
   border-top: 2px solid var(--pink);
-  max-width: 1100px;
 }
 .vision__title {
   margin: 0 0 20px;
@@ -1025,6 +1027,67 @@ figcaption strong {
 }
 .hero__glow { animation: breathe 5s ease-in-out infinite alternate; }
 
+/* ---------- about motion ---------- */
+.ticker--rev {
+  background: var(--pink);
+  transform: rotate(1.5deg);
+  margin: 0 -12px;
+  box-shadow: 0 0 0 6px var(--ink), 0 -10px 0 6px var(--acid);
+  z-index: 3;
+}
+.ticker--rev .ticker__track { animation: marquee 40s linear infinite reverse; }
+.ticker--rev b { color: var(--acid); }
+
+.js [data-lit] > p { opacity: .28; transform: translateY(12px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js [data-lit] > p.is-lit { opacity: 1; transform: none; }
+@keyframes hit-stamp { from { transform: scale(1.6) rotate(-8deg); opacity: 0; } }
+[data-lit] > p.is-lit .hit { display: inline-block; animation: hit-stamp .5s cubic-bezier(.3,1.6,.5,1) both; }
+[data-lit] > p.is-lit .hit:nth-of-type(2) { animation-delay: .12s; }
+[data-lit] > p.is-lit .hit:nth-of-type(3) { animation-delay: .24s; }
+.manifesto__scar { display: inline-block; animation: glitch 4s steps(1) infinite; }
+.about__portrait .frame--photo { animation: float-a 7s ease-in-out infinite; }
+
+/* PSMD★ page layout */
+.psmd__stack { display: none; }
+@keyframes stack-float { 50% { translate: 0 -14px; } }
+@media (min-width: 1000px) {
+  .psmd__head--split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 96px); align-items: center; }
+  .psmd__stack { display: block; position: relative; aspect-ratio: 5 / 4; }
+  .psmd__stack img {
+    position: absolute; width: 52%; height: auto;
+    background: #fff;
+    box-shadow: 8px 8px 0 var(--pink), 0 20px 50px rgba(0,0,0,.6);
+    animation: stack-float 6s ease-in-out infinite;
+    transition: transform .4s var(--ease);
+  }
+  .psmd__stack img:nth-child(1) { left: 0; top: 8%; transform: rotate(-7deg); }
+  .psmd__stack img:nth-child(2) { left: 26%; top: 0; transform: rotate(3deg); z-index: 2; animation-delay: -2s; box-shadow: 8px 8px 0 var(--acid), 0 20px 50px rgba(0,0,0,.6); }
+  .psmd__stack img:nth-child(3) { right: 0; top: 22%; transform: rotate(8deg); animation-delay: -4s; }
+  .psmd__stack:hover img:nth-child(1) { transform: rotate(-12deg) translateX(-12px); }
+  .psmd__stack:hover img:nth-child(3) { transform: rotate(13deg) translateX(12px); }
+
+  .vision__cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 5vw, 96px); align-items: start; }
+  .vision__col--b { padding-top: 8px; }
+  .vision__col .vision__split { grid-template-columns: 1fr; }
+}
+@media (min-width: 1400px) {
+  .vision__col .vision__split { grid-template-columns: 1fr 1fr; }
+}
+.more-tile {
+  display: flex; flex-direction: column; justify-content: space-between;
+  aspect-ratio: 1 / 1;
+  padding: clamp(16px, 2vw, 28px);
+  background: var(--pink); color: var(--ink);
+  font: 400 clamp(1.5rem, 2.6vw, 2.6rem)/1 var(--f-display);
+  text-transform: lowercase;
+  letter-spacing: -.03em;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.more-tile__arrow { align-self: flex-end; font-size: 1.6em; transition: transform .3s var(--ease); }
+.product__link:hover .more-tile { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 var(--acid); }
+.product__link:hover .more-tile__arrow { transform: translate(6px, -6px); }
+@media (max-width: 999px) { .product--more { display: none; } }
+
 /* ---------- reveals ---------- */
 .js .reveal {
   opacity: 0;
@@ -1044,6 +1107,7 @@ figcaption strong {
     transition: none !important;
   }
   .js .reveal { opacity: 1; transform: none; }
+  .js [data-lit] > p { opacity: 1; transform: none; }
   .ticker__track { width: auto; flex-wrap: wrap; justify-content: center; }
   .ticker__track > :nth-child(n+15) { display: none; }
   .hero__cue i { transform: none; }
