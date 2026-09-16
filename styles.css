@@ -1048,11 +1048,13 @@ figcaption strong {
 .about__portrait .frame--photo { animation: float-a 7s ease-in-out infinite; }
 
 /* PSMD★ page layout */
+.psmd__head--split { text-align: center; }
+.psmd__head--split .psmd__logo img { margin-inline: auto; }
 .psmd__stack { display: none; }
 @keyframes stack-float { 50% { translate: 0 -14px; } }
 @media (min-width: 1000px) {
-  .psmd__head--split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 96px); align-items: center; }
-  .psmd__stack { display: block; position: relative; aspect-ratio: 5 / 4; }
+  /* product stack hidden for now — remove the display:none below to bring it back */
+  .psmd__stack { display: none; position: relative; aspect-ratio: 5 / 4; }
   .psmd__stack img {
     position: absolute; width: 52%; height: auto;
     background: #fff;
