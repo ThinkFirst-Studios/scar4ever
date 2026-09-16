@@ -228,9 +228,13 @@ button { font: inherit; color: inherit; }
 }
 .hero__media {
   position: absolute; inset: 0;
-  aspect-ratio: auto;
+  overflow: hidden;
 }
-.hero__media .slot__label { top: 76px; bottom: auto; left: var(--gut); max-width: 20rem; }
+.hero__media img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 0;
+}
 .hero__scrim {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 30%, rgba(179,0,94,.35) 60%, #000 96%);
@@ -281,12 +285,21 @@ button { font: inherit; color: inherit; }
 @keyframes drip { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
 
 @media (min-width: 900px) {
-  .hero { justify-content: space-between; padding-top: 112px; }
+  /* two columns: tagline + id + logo grouped on the left, artwork on the right */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 1fr 1fr;
+    column-gap: clamp(32px, 4vw, 80px);
+    row-gap: clamp(20px, 3.5vh, 40px);
+    padding: 104px var(--gut) 40px;
+  }
   .hero__claim {
-    position: relative;
+    grid-column: 1; grid-row: 1; align-self: end;
+    position: relative; z-index: 3;
     display: flex; flex-direction: column; gap: .06em;
     margin: 0;
-    font: 400 min(4.7vw, 10vh)/1 var(--f-display);
+    font: 400 min(4.2vw, 9.5vh)/1 var(--f-display);
     letter-spacing: -.02em;
     text-transform: lowercase;
     color: var(--pink);
@@ -311,16 +324,20 @@ button { font: inherit; color: inherit; }
   }
   .cross::before { left: 50%; top: 0; bottom: 0; width: .11em; translate: -50% 0; }
   .cross::after  { top: 26%; left: 0; right: 0; height: .11em; }
+  .hero__copy { grid-column: 1; grid-row: 2; align-self: start; z-index: 3; }
   .hero__media {
-    left: auto; right: var(--gut); top: 96px; bottom: 6vh;
-    width: min(42vw, 820px);
-    clip-path: polygon(0 2%, 100% 0, 98% 100%, 3% 97%);
+    grid-column: 2; grid-row: 1 / span 2; align-self: center;
+    position: relative; inset: auto; z-index: 2;
+    height: min(calc(100svh - 144px), 1000px);
+    aspect-ratio: 4 / 5;
+    max-width: 42vw;
+    transform: rotate(1.5deg);
+    box-shadow: -12px 12px 0 var(--pink), 0 0 80px rgba(255,46,147,.25);
   }
-  .hero__media .slot__label { left: 16px; top: auto; bottom: 16px; }
-  .hero__scrim { background: linear-gradient(180deg, transparent 70%, rgba(0,0,0,.85)); }
-  .hero__media .slot__label { bottom: auto; top: 16px; }
+  .hero__scrim { display: none; }
   .hero__id { flex-direction: row; gap: 24px; }
-  .hero__word img { width: min(46vw, 96vh, 800px); }
+  .hero__word img { width: min(30vw, 38vh, 520px); }
+  .hero__cue { z-index: 3; bottom: 16px; }
 }
 
 /* ---------- 2 · ticker ---------- */
