@@ -89,6 +89,7 @@ button { font: inherit; color: inherit; }
   letter-spacing: -.045em;
   color: var(--pink);
   margin: 0;
+  padding-bottom: .18em;  /* room for p/g/y descenders */
 }
 
 /* ---------- top bar ---------- */
@@ -381,7 +382,7 @@ button { font: inherit; color: inherit; }
 .filters button small { font-size: .75rem; font-weight: 500; text-transform: lowercase; opacity: .8; }
 .filters button:hover { border-color: var(--acid); color: var(--acid); transform: translate(-2px, -2px); }
 .filters button[aria-pressed="true"] { background: var(--pink); border-color: var(--pink); color: var(--ink); }
-.work__note { margin: 0; color: var(--muted); }
+.work__note { margin: 12px 0 0; color: var(--muted); }
 
 .grid {
   display: grid;
@@ -891,6 +892,9 @@ figcaption strong {
 @media (min-width: 1000px) { .shop-grid { grid-template-columns: repeat(4, 1fr); gap: 40px 24px; } }
 
 /* PSMD★ vision */
+.vision--top { margin: clamp(2.5rem, 6vw, 4rem) 0 clamp(4rem, 9vw, 6rem); }
+.shop-head { padding-top: clamp(2.5rem, 6vw, 4rem); border-top: 2px solid var(--pink); margin-bottom: 28px; }
+.shop-head .svc-group__title { margin-bottom: 8px; }
 .vision {
   margin-top: clamp(4rem, 9vw, 7rem);
   padding-top: clamp(2.5rem, 6vw, 4rem);
@@ -1000,15 +1004,13 @@ figcaption strong {
   95% { transform: translate(3px, -1px); }
   97% { transform: translate(-1px, 0); }
 }
-@keyframes chrome-sweep { to { background-position: 0 -200%; } }
 @keyframes stamp { from { opacity: 0; transform: scale(1.4) rotate(-6deg); } }
 
 .hero__claim span { animation: rise-in .8s var(--ease) both; }
 .hero__claim span:nth-child(1) { animation-delay: .1s; }
 .hero__claim span:nth-child(2) { animation-delay: .22s; }
 .hero__claim span:nth-child(3) { animation-delay: .34s; }
-.hero__claim span:nth-child(1) { animation: rise-in .8s var(--ease) .1s both, glitch 6s steps(1) 2s infinite; }
-.hero__claim .hero__claim--out { background-size: 100% 200%; animation: rise-in .8s var(--ease) .22s both, chrome-sweep 4s linear 1s infinite; }
+.hero__claim .hero__claim--out { display: inline-block; animation: rise-in .8s var(--ease) .22s both, glitch 6s steps(1) 2s infinite; }
 .hero__id span { display: inline-block; animation: slide-in-left .6s var(--ease) both; }
 .hero__id span:nth-child(1) { animation-delay: .45s; }
 .hero__id span:nth-child(2) { animation-delay: .55s; }
