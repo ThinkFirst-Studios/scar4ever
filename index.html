@@ -21,6 +21,7 @@
   <a class="bar__mark" href="#top" aria-label="scar — back to top">scar</a>
   <nav class="bar__nav" aria-label="Main">
     <a href="#work" data-text="work">work</a>
+    <a href="#services" data-text="services">services</a>
     <a href="#about" data-text="about">about</a>
     <a href="#elsewhere" data-text="links">links</a>
   </nav>
@@ -40,7 +41,7 @@
   <p class="hero__claim">
     <span>graphic designer</span>
     <span class="hero__claim--out">maximalist</span>
-    <span>creative <b>✞</b></span>
+    <span>creative <b class="cross" role="img" aria-label="cross"></b></span>
   </p>
 
   <div class="hero__copy">
@@ -56,10 +57,10 @@
 </section>
 
 <!-- 2 · TICKER -->
-<div class="ticker" aria-label="Graphic design, brand identity, apparel, album art, social, templates">
+<div class="ticker" aria-label="Services: video and content, marketing design, branding, websites, social media, graphic design, photography">
   <div class="ticker__track" aria-hidden="true">
-    <span>GRAPHIC DESIGN</span><b>·</b><span>BRAND IDENTITY</span><b>·</b><span>APPAREL</span><b>·</b><span>ALBUM ART</span><b>·</b><span>SOCIAL</span><b>·</b><span>TEMPLATES</span><b>·</b>
-    <span>GRAPHIC DESIGN</span><b>·</b><span>BRAND IDENTITY</span><b>·</b><span>APPAREL</span><b>·</b><span>ALBUM ART</span><b>·</b><span>SOCIAL</span><b>·</b><span>TEMPLATES</span><b>·</b>
+    <span>VIDEO &amp; CONTENT</span><b>·</b><span>MARKETING DESIGN</span><b>·</b><span>BRANDING</span><b>·</b><span>WEBSITES</span><b>·</b><span>SOCIAL MEDIA</span><b>·</b><span>GRAPHIC DESIGN</span><b>·</b><span>PHOTOGRAPHY</span><b>·</b>
+    <span>VIDEO &amp; CONTENT</span><b>·</b><span>MARKETING DESIGN</span><b>·</b><span>BRANDING</span><b>·</b><span>WEBSITES</span><b>·</b><span>SOCIAL MEDIA</span><b>·</b><span>GRAPHIC DESIGN</span><b>·</b><span>PHOTOGRAPHY</span><b>·</b>
   </div>
 </div>
 
@@ -69,132 +70,197 @@
     <h2 class="display misreg" id="work-title" data-text="the work">the work</h2>
     <div class="filters" role="group" aria-label="Filter work">
       <button type="button" aria-pressed="true" data-filter="all">All</button>
-      <button type="button" aria-pressed="false" data-filter="design">Design</button>
-      <button type="button" aria-pressed="false" data-filter="apparel">Apparel</button>
-      <button type="button" aria-pressed="false" data-filter="photo">Photo <small>shotbyscar</small></button>
-      <button type="button" aria-pressed="false" data-filter="templates">Templates</button>
+      <button type="button" aria-pressed="false" data-filter="graphics">Graphics</button>
+      <button type="button" aria-pressed="false" data-filter="logo">Logo Design</button>
+      <button type="button" aria-pressed="false" data-filter="merch">Merch</button>
+      <button type="button" aria-pressed="false" data-filter="photo">Photo &amp; Styling <small>shotbyscar</small></button>
     </div>
-    <p class="work__note">Captions read client / work type / year. <span class="confirm">[CONFIRM] years &amp; work types for each piece</span></p>
+    <p class="work__note">Captions read client / work / year.</p>
   </div>
 
   <div class="grid" id="grid">
 
-    <figure class="piece piece--feature reveal" data-cat="apparel design">
+    <figure class="piece piece--feature reveal" data-cat="merch">
       <div class="slot slot--square" role="img" aria-label="Placeholder: New Era × Bella Doña × Betty Boop collaboration, campaign image, square">
         <span class="slot__tag">Headline credit</span>
-        <span class="slot__label">[IMAGE: campaign — square, largest slot]</span>
+        <span class="slot__label">[IMAGE: New Era × Bella Doña × Betty Boop — square, largest slot. Awaiting file + brand OK.]</span>
       </div>
       <figcaption><strong>New Era × Bella Doña × Betty Boop</strong><span>Collaboration <span class="confirm">[CONFIRM] type</span></span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--tall reveal" data-cat="apparel">
-      <div class="slot slot--tall" role="img" aria-label="Placeholder: High Rollers Camo collection, apparel flat lay, tall">
-        <span class="slot__label">[IMAGE: apparel flat lay — tall]</span>
-      </div>
-      <figcaption><strong>High Rollers</strong><span>"Camo" Collection</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="photo">
+      <div class="media"><img src="assets/work/wkggrl-summer-bbq.webp" width="750" height="1125" alt="Friends around a red gingham picnic table; a hand with long yellow nails rests on a blue Working Girl Collective water bottle" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Working Girl Collective</strong><span>Summer BBQ · photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: Working Girl Collective Summer BBQ, square">
-        <span class="slot__label">[IMAGE: flyer / social — square]</span>
-      </div>
-      <figcaption><strong>Working Girl Collective</strong><span>Summer BBQ <span class="confirm">[CONFIRM] type</span></span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="graphics">
+      <div class="media"><img src="assets/work/bella-dona-pendeja-sticker.webp" width="900" height="1125" alt="Pink bubble-letter sticker reading Stop Being a Pendeja over a repeating pink pattern, with a Bella Doña mark" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bella Doña</strong><span>“Stop Being a Pendeja” sticker graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--square reveal" data-cat="apparel">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: Working Girl Collective Hotline Trucker hat, square">
-        <span class="slot__label">[IMAGE: product — square]</span>
-      </div>
-      <figcaption><strong>Working Girl Collective</strong><span>Hotline Trucker</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="logo">
+      <div class="media"><img src="assets/work/ab-gonzalez-logo.webp" width="900" height="900" alt="Black wordmark: AB above GONZALEZ set in an arc" loading="lazy" decoding="async"></div>
+      <figcaption><strong>AB Gonzalez</strong><span>Logo design</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: Working Girl Collective Cyber Stone, square">
-        <span class="slot__label">[IMAGE: graphic — square]</span>
-      </div>
-      <figcaption><strong>Working Girl Collective</strong><span>Cyber Stone <span class="confirm">[CONFIRM] type</span></span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="merch">
+      <picture class="media">
+        <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/bella-dona-lucky-me-tote-still.webp">
+        <img src="assets/work/bella-dona-lucky-me-tote.webp" width="800" height="1000" alt="Hand with pink nails holding a red tote bag printed Lucky Me I’m Latina, Bella Doña" loading="lazy" decoding="async">
+      </picture>
+      <figcaption><strong>Bella Doña</strong><span>“Lucky Me I’m Latina” tote · ticket exclusive</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--wide reveal" data-cat="photo">
-      <div class="slot slot--wide" role="img" aria-label="Placeholder: Working Girl Collective PTO Lookbook, wide campaign image">
-        <span class="slot__label">[IMAGE: lookbook campaign — wide]</span>
-      </div>
-      <figcaption><strong>Working Girl Collective</strong><span>PTO Lookbook</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="photo">
+      <div class="media"><img src="assets/work/kt-fitness.webp" width="900" height="1348" alt="Silhouetted woman posed on gym equipment under deep blue light" loading="lazy" decoding="async"></div>
+      <figcaption><strong>KT Fitness</strong><span>Photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--tall reveal" data-cat="apparel">
-      <div class="slot slot--tall" role="img" aria-label="Placeholder: High Rollers Don't Crash Out collection, apparel, tall">
-        <span class="slot__label">[IMAGE: apparel flat lay — tall]</span>
-      </div>
-      <figcaption><strong>High Rollers</strong><span>"Don't Crash Out" Collection</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="graphics">
+      <div class="media"><img src="assets/work/bella-dona-eyes.webp" width="858" height="822" alt="Grid of black-and-white close-ups of eyes with winged liner, Bella Doña script below" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bella Doña</strong><span>Eyeliner collage graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: Working Girl Collective x Chergoodeats, square">
-        <span class="slot__label">[IMAGE: collab graphic — square]</span>
-      </div>
-      <figcaption><strong>Working Girl Collective × Chergoodeats</strong><span>Collab <span class="confirm">[CONFIRM] type</span></span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="graphics">
+      <div class="media"><img src="assets/work/dai-media-cover.webp" width="900" height="1165" alt="Man in sunglasses and a moto jersey with headline text: If you wanted a successful clothing brand tomorrow, you’d read Motive by Dai Media" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Dai Media</strong><span>Cover design</span><span class="confirm">[CONFIRM] client credit</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: Lash Daddie brand work, square">
-        <span class="slot__label">[IMAGE: brand mark — square]</span>
-      </div>
-      <figcaption><strong>Lash Daddie</strong><span class="confirm">[CONFIRM] type</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="logo">
+      <div class="media"><img src="assets/work/bawse-beauty-world-logo.webp" width="900" height="662" alt="Chrome script BW monogram with a heart on black" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bawse Beauty World</strong><span>Logo design</span><span class="confirm">[CONFIRM] client name</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--tall reveal" data-cat="photo">
-      <div class="slot slot--tall" role="img" aria-label="Placeholder: Maddison Hodges, portrait photo, tall">
-        <span class="slot__label">[IMAGE: portrait session — tall]</span>
-      </div>
-      <figcaption><strong>Maddison Hodges</strong><span>Photo <span class="confirm">[CONFIRM] type</span></span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="merch">
+      <div class="media"><img src="assets/work/loteria-tee.webp" width="900" height="1125" alt="Back view of a man wearing a brown tee printed with a grid of illustrated character cards" loading="lazy" decoding="async"></div>
+      <figcaption><strong><span class="confirm">[CONFIRM] client</span></strong><span>Tee graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--wide reveal" data-cat="design">
-      <div class="slot slot--wide" role="img" aria-label="Placeholder: Lash Drip LA brand work, wide">
-        <span class="slot__label">[IMAGE: brand spread — wide]</span>
-      </div>
-      <figcaption><strong>Lash Drip LA</strong><span class="confirm">[CONFIRM] type</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="logo">
+      <div class="media"><img src="assets/work/wkggrl-keychain.webp" width="900" height="720" alt="Working Girl Collective logo keychain in orange, pink and blue with a pink star" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Working Girl Collective</strong><span>Logo keychain</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: Not Your Babe, square">
-        <span class="slot__label">[IMAGE: graphic — square]</span>
-      </div>
-      <figcaption><strong>Not Your Babe</strong><span class="confirm">[CONFIRM] type</span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: KT Fitness, square">
-        <span class="slot__label">[IMAGE: brand mark — square]</span>
-      </div>
-      <figcaption><strong>KT Fitness</strong><span class="confirm">[CONFIRM] type</span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
-    <figure class="piece piece--square reveal" data-cat="design">
-      <div class="slot slot--square" role="img" aria-label="Placeholder: California Bliss, square">
-        <span class="slot__label">[IMAGE: graphic — square]</span>
-      </div>
-      <figcaption><strong>California Bliss</strong><span class="confirm">[CONFIRM] type</span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
-    <figure class="piece piece--tall reveal" data-cat="photo">
-      <div class="slot slot--tall" role="img" aria-label="Placeholder: Drea 4 Scar, photo, tall">
-        <span class="slot__label">[IMAGE: session — tall]</span>
-      </div>
-      <figcaption><strong>Drea 4 Scar</strong><span>Photo <span class="confirm">[CONFIRM] type</span></span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
-    <figure class="piece piece--wide reveal" data-cat="photo">
-      <div class="slot slot--wide" role="img" aria-label="Placeholder: Bday Shoot Karina, detail shot, wide">
-        <span class="slot__label">[IMAGE: detail shot — wide. Adults only.]</span>
-      </div>
-      <figcaption><strong>Bday Shoot: Karina</strong><span>Photo</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="photo">
+      <div class="media"><img src="assets/work/bday-shoot-karina.webp" width="900" height="1348" alt="Woman holding a white cake in front of silver 33 balloons" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bday Shoot: Karina</strong><span>Photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
   </div>
 
-  <p class="grid__empty" id="grid-empty" hidden>No template work in the published portfolio yet. <span class="confirm">[CONFIRM] template pieces to show</span></p>
+  <p class="grid__empty" id="grid-empty" hidden>Nothing in this category yet.</p>
+
+  <div class="clients reveal">
+    <h3 class="clients__title">also on the list</h3>
+    <ul class="clients__list">
+      <li>Working Girl Collective <span>Cyber Stone · PTO Lookbook · Hotline Trucker · × Chergoodeats</span></li>
+      <li>High Rollers <span>“Camo” Collection · “Don’t Crash Out” Collection</span></li>
+      <li>Lash Daddie</li>
+      <li>Lash Drip LA</li>
+      <li>Not Your Babe</li>
+      <li>Maddison Hodges</li>
+      <li>California Bliss</li>
+      <li>Drea 4 Scar</li>
+    </ul>
+    <p class="clients__note"><span class="confirm">[CONFIRM] files for these projects</span></p>
+  </div>
+</section>
+
+<!-- 3b · SERVICES -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="services__head">
+    <h2 class="display misreg" id="services-title" data-text="services">services</h2>
+  </div>
+  <ul class="svc-grid">
+    <li class="svc reveal">
+      <img src="assets/services/content-session.webp" width="560" height="700" alt="Service card on leopard print: Content Session" loading="lazy" decoding="async">
+      <p class="svc__group">Video + Content</p>
+      <h3 class="svc__name">Content Session — Photo + Video</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/sticker-pack.webp" width="560" height="700" alt="Service card on leopard print: Sticker Pack Design" loading="lazy" decoding="async">
+      <p class="svc__group">Graphic + Marketing Design</p>
+      <h3 class="svc__name">Sticker Pack Design</h3>
+      <span class="svc__price">$200</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/instagram-post-flyer.webp" width="560" height="700" alt="Service card on leopard print: Post + Flyer, Instagram / Print" loading="lazy" decoding="async">
+      <p class="svc__group">Branding + Social Media</p>
+      <h3 class="svc__name">Instagram Post / Flyer</h3>
+      <span class="svc__price">from $125</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/logo-design.webp" width="560" height="700" alt="Service card on leopard print: scarmosttdope primary logo, flaming-heart circle secondary logo and S submark" loading="lazy" decoding="async">
+      <p class="svc__group">Branding + Social Media</p>
+      <h3 class="svc__name">Logo Design</h3>
+      <span class="svc__price">from $550</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/social-media-content-kit.webp" width="560" height="700" alt="Service card on leopard print: Social Media Aesthetic Kit" loading="lazy" decoding="async">
+      <p class="svc__group">Branding + Social Media</p>
+      <h3 class="svc__name">Social Media Content Kit</h3>
+      <span class="svc__price">from $750</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/brand-identity-kit.webp" width="560" height="700" alt="Service card on leopard print: Brand Design Identity Kit" loading="lazy" decoding="async">
+      <p class="svc__group">Branding + Social Media</p>
+      <h3 class="svc__name">The Ultimate Brand Identity Kit — CEO tier</h3>
+      <span class="svc__price">$1,000</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/website-design.webp" width="560" height="700" alt="Service card on leopard print: Website Design &amp; Development" loading="lazy" decoding="async">
+      <p class="svc__group">Websites</p>
+      <h3 class="svc__name">MosttDope Website Development + Design</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/product-shots.webp" width="560" height="700" alt="Service card on leopard print: Product Shots, Ecom + Lifestyle" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Product Shots</h3>
+      <span class="svc__price">from $150</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/brand-lookbook.webp" width="560" height="700" alt="Service card on leopard print: Brand Lookbook" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Brand Lookbook</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/couples-session.webp" width="560" height="700" alt="Service card on leopard print: Couples Photo Session" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Couples Session</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/maternity-session.webp" width="560" height="700" alt="Service card on leopard print: Maternity Photo Session" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Maternity Session</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/family-session.webp" width="560" height="700" alt="Service card on leopard print: Family Photo Session" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Family Session</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/birthday-session.webp" width="560" height="700" alt="Service card on leopard print: Birthday Photo Session" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Birthday Session</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+    <li class="svc reveal">
+      <img src="assets/services/senior-portraits.webp" width="560" height="700" alt="Service card on leopard print: Senior Portraits" loading="lazy" decoding="async">
+      <p class="svc__group">Photography</p>
+      <h3 class="svc__name">Senior Portraits</h3>
+      <span class="confirm">[CONFIRM] price</span>
+    </li>
+  </ul>
+  <div class="services__cta">
+    <a class="btn" href="#contact">let's work</a>
+    <a class="btn btn--ghost" href="https://www.scar4ever.com/designservices" target="_blank" rel="noopener">book on the current store ↗</a>
+  </div>
 </section>
 
 <!-- 4 · ABOUT / MANIFESTO -->

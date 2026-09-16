@@ -65,6 +65,8 @@ Every one of these was verified on her live site on 2026-09-16.
 
 - Published prices: IG post/flyer from **$125** · product shots from **$150** · sticker pack **$200** · logo from **$550** · content kit from **$750** · Ultimate Brand Identity Kit (CEO tier) **$1,000**
 - Real clients: Working Girl Collective, High Rollers, **New Era × Bella Doña × Betty Boop**, Lash Daddie, Lash Drip LA, Not Your Babe, KT Fitness, Maddison Hodges, California Bliss, Chergoodeats
+- Service categories (her nav, 2026-09-16): Video · Content · Marketing Design · Branding · Websites · Social Media · Graphic Design · Photography. Mockup ticker merges Video + Content into one item per Alex.
+- Additional names from her supplied portfolio files: **Bella Doña** (sticker, eyeliner graphic, "Lucky Me I'm Latina" tote), **AB Gonzalez** (logo), **Bawse Beauty World** (logo, from filename), **Dai Media** (cover, from artwork text). `[CONFIRM]` credits before using in outreach.
 - PSMD founded **2016**
 - Current fonts: **Archivo Black** + **Space Grotesk**
 - Her own site tagline: *"INSTAGRAM ISN'T FOREVER BUT THIS WEBSITE WILL BE"* — she already believes the argument. Use her line back to her.

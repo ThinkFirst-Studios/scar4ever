@@ -3,3 +3,6 @@ Thumbs.db
 node_modules/
 .vscode/
 *.log
+
+# source files from SCAR — optimized copies live in assets/
+images/
