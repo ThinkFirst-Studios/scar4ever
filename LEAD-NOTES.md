@@ -67,6 +67,11 @@ Every one of these was verified on her live site on 2026-09-16.
 - Real clients: Working Girl Collective, High Rollers, **New Era × Bella Doña × Betty Boop**, Lash Daddie, Lash Drip LA, Not Your Babe, KT Fitness, Maddison Hodges, California Bliss, Chergoodeats
 - Service categories (her nav, 2026-09-16): Video · Content · Marketing Design · Branding · Websites · Social Media · Graphic Design · Photography. Mockup ticker merges Video + Content into one item per Alex.
 - Additional names from her supplied portfolio files: **Bella Doña** (sticker, eyeliner graphic, "Lucky Me I'm Latina" tote), **AB Gonzalez** (logo), **Bawse Beauty World** (logo, from filename), **Dai Media** (cover, from artwork text). `[CONFIRM]` credits before using in outreach.
+- Full service copy supplied by Alex 2026-09-16 (from her store), now on `services.html`:
+  - Photo sessions (Product Shots, Brand Lookbook, Senior Portraits, Couples, Maternity, Family, Birthday) and Content Session: listed **from $150** = the deposit. 2-hour session **$580**, balance invoiced, due 24h before or the session is cancelled and deposit kept. 12 edited photos/hour. Content Session adds flash drive + 3 Reels/TikToks.
+  - Sticker Pack $200 = 8 unique stickers. Logo from $550 = primary, secondary, submark, 2-color PNG watermark.
+  - 🚩 **Brand Identity Kit (CEO tier)** is listed at **$1,000** but her own copy says **project total $2,500**, 50% deposit at checkout (which would be $1,250), then 25% / 25%. Pricing inconsistency on her live store — worth raising gently in the pitch.
+  - No description on her store for Instagram Post/Flyer, Social Media Content Kit, or Websites.
 - PSMD founded **2016**
 - Current fonts: **Archivo Black** + **Space Grotesk**
 - Her own site tagline: *"INSTAGRAM ISN'T FOREVER BUT THIS WEBSITE WILL BE"* — she already believes the argument. Use her line back to her.

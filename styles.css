@@ -713,6 +713,121 @@ figcaption strong {
 .form .btn { justify-self: start; border: 0; cursor: pointer; }
 .form__status { margin: 0; min-height: 1.5em; }
 
+/* ---------- services page detail ---------- */
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.jump a {
+  min-height: 44px; display: inline-flex; align-items: center;
+  padding: 0 14px;
+  border: 2px solid #3a3a3a;
+  font-weight: 700; text-decoration: none;
+  transition: border-color .2s, color .2s, transform .2s var(--ease);
+}
+.jump a:hover { border-color: var(--pink); color: var(--pink); transform: translate(-2px, -2px); }
+
+.svc-group {
+  scroll-margin-top: 80px;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0 0;
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  border-top: 2px solid var(--pink);
+}
+.svc-group__title {
+  margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+  font: 400 clamp(2rem, 6vw, 4.5rem)/.95 var(--f-display);
+  letter-spacing: -.035em;
+  text-transform: lowercase;
+  color: var(--pink);
+}
+
+.svc-detail {
+  display: grid; gap: 24px;
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+.svc-detail + .svc-detail { padding-top: clamp(2rem, 5vw, 3.5rem); border-top: 1px solid #262626; }
+.svc-detail__media img {
+  display: block; width: 100%; max-width: 420px; height: auto;
+  box-shadow: 8px 8px 0 var(--pink);
+}
+.svc-detail__body { max-width: 760px; }
+.svc-detail__body > p { margin: 0 0 1em; }
+.svc-detail__tier {
+  display: inline-block;
+  margin: 0 0 10px !important;
+  padding: 4px 10px;
+  background: var(--acid); color: var(--ink);
+  font: 400 .8rem/1.2 var(--f-display);
+  text-transform: uppercase; letter-spacing: .04em;
+  transform: rotate(-2deg);
+}
+.svc-detail__name {
+  margin: 0 0 8px;
+  font: 400 clamp(1.75rem, 4.5vw, 3rem)/1 var(--f-display);
+  letter-spacing: -.03em;
+}
+.svc-detail__price {
+  font: 700 clamp(1.5rem, 3.5vw, 2.25rem)/1.1 var(--f-body);
+  color: var(--acid);
+}
+.svc-detail__price span { font-size: .55em; color: var(--muted); font-weight: 500; }
+.svc-detail__lead { font-size: 1.2rem; line-height: 1.5; }
+.svc-detail__label {
+  margin: 1.5em 0 .6em;
+  font: 700 .875rem/1.2 var(--f-body);
+  text-transform: uppercase; letter-spacing: .14em;
+  color: var(--pink);
+}
+.svc-detail__small { color: var(--muted); font-size: 1rem; }
+
+.tags { list-style: none; margin: 0 0 .5em; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li {
+  padding: 7px 12px;
+  border: 1.5px solid var(--chrome);
+  font-weight: 500; font-size: 1rem; line-height: 1.2;
+}
+
+.defs { margin: 0; display: grid; gap: 12px; }
+.defs div { display: grid; gap: 2px; padding-left: 14px; border-left: 3px solid var(--pink); }
+.defs dt { font: 400 1.05rem/1.2 var(--f-display); }
+.defs dd { margin: 0; color: var(--muted); }
+
+.terms { margin-top: 1.75em; }
+.terms p { margin: .8em 0 0; }
+.terms--box {
+  margin: 0 0 clamp(2rem, 5vw, 3rem);
+  padding: clamp(20px, 3vw, 32px);
+  border: 2px solid var(--chrome);
+  background: linear-gradient(160deg, rgba(255,46,147,.14), transparent 60%);
+}
+.terms--box > .svc-detail__label { margin-top: 0; }
+.terms__cols { display: grid; gap: 24px; }
+.terms__h { margin: 0 0 8px; font: 400 1.1rem/1.2 var(--f-display); }
+.terms__list { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; }
+.terms__list li::marker { color: var(--pink); }
+.terms__warn { color: var(--muted); font-size: .95rem; }
+.terms__dm a { color: var(--pink); font-weight: 700; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; counter-reset: step; }
+.steps li {
+  display: flex; gap: 12px; align-items: baseline;
+  padding: 10px 14px;
+  background: #111;
+  border-left: 4px solid var(--acid);
+}
+.steps b { font: 400 1.25rem/1 var(--f-display); color: var(--acid); min-width: 3.2ch; }
+
+.svc-grid--compact { grid-template-columns: repeat(2, minmax(0, 260px)); }
+.services--page .svc-grid { margin-top: 8px; }
+
+@media (min-width: 760px) {
+  .svc-detail { grid-template-columns: minmax(220px, 340px) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .terms__cols { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (min-width: 1000px) {
+  .svc-grid--compact { grid-template-columns: repeat(auto-fill, minmax(200px, 240px)); }
+  .svc-grid--sessions { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1500px) {
+  .svc-grid--sessions { grid-template-columns: repeat(7, 1fr); }
+}
+
 /* ---------- reveals ---------- */
 .js .reveal {
   opacity: 0;
