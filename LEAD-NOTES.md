@@ -1,6 +1,6 @@
 # SCAR / Stephanie Cardona — Lead Notes
 
-**Status:** LEAD — not signed. Spec mockup only.
+**Status:** SIGNED CLIENT (promoted 2026-09-16)
 **Added:** 2026-09-16
 **Slug:** `scar4ever`
 
@@ -95,7 +95,8 @@ Every one of these was verified on her live site on 2026-09-16.
 
 | Date | Channel | What happened |
 |---|---|---|
-| 2026-09-16 | — | Lead added. Research complete, mockup brief written. Not yet contacted. |
+| 2026-09-16 | — | Lead added. Research complete, mockup brief written. |
+| 2026-09-16 | — | **Signed.** Mockup live at thinkfirststudios.github.io/scar4ever (noindex). Admin/CMS discussed. |
 
 ---
 
