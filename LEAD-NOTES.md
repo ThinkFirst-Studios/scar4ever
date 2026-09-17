@@ -91,6 +91,24 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ---
 
+## Follow-up details (collect after the questionnaire)
+
+The client questionnaire is kept short on purpose. Get these separately (call, DM or email):
+
+- Public email; where form messages go; phone (y/n); target launch date
+- Brand Identity Kit: $1,000 or $2,500 total?
+- Prices: Social Media Content Kit, IG Post/Flyer, website package; descriptions for those three
+- PSMD★ prices for every product; shipping regions; Shopify account (y/n)
+- Celebrity-likeness products (LATTO BBY, Mister West, FERXXO, Kimmie Star): licensed?
+- Horseshoe-and-cross emblem (Ffiti Flower, Chromie): original design?
+- New Era × Bella Doña × Betty Boop: written OK + files; anything under NDA
+- Portfolio years; confirm Dai Media, Bawse Beauty World, tee-graphic client
+- Files for High Rollers, Lash Daddie, Lash Drip LA, Not Your Babe, Maddison Hodges, California Bliss, Drea 4 Scar, other WGC projects
+- Role at South Bay Creative / Working Girl Collective
+- Honolulu / El Paso / LA: one line or local pages
+- Domain registrar for both domains; email on those domains (don't touch MX); Squarespace renewal dates; order + customer export; sales tax registration
+- GitHub account (for the admin login)
+
 ## Outreach log
 
 | Date | Channel | What happened |
