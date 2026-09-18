@@ -10,26 +10,25 @@
 <!-- SPEC CONCEPT — prospect has not signed. Not for deployment. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:wght@400;500;700&display=swap">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/brand/scar-logo.webp">
-<link rel="stylesheet" href="styles.css?v=20260916125705">
+<link rel="preload" as="image" href="assets/brand/scar-wordmark.webp">
+<link rel="stylesheet" href="styles.css?v=20260918100100">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="page-portfolio">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="bar" id="top">
-  <a class="bar__mark" href="index.html"><img src="assets/brand/scar-logo-sm.webp" width="200" height="93" alt="scar — home"></a>
+  <a class="bar__mark" href="index.html"><img src="assets/brand/scar-wordmark-sm.webp" width="260" height="82" alt="scar — home"></a>
   <nav class="bar__nav" id="site-nav" aria-label="Main">
     <a href="index.html" data-text="home">home</a>
     <a href="portfolio.html" data-text="portfolio" aria-current="page">portfolio</a>
     <a href="services.html" data-text="services">services</a>
     <a href="contact.html" data-text="contact">contact</a>
-    <a href="psmd.html" data-text="psmd★">psmd<span class="star">★</span></a>
   </nav>
-  <a class="bar__cta" href="contact.html">let's work</a>
+  <a class="bar__cta" href="contact.html">book a session</a>
   <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="site-nav">menu</button>
 </header>
 
@@ -38,13 +37,13 @@
 <!-- 3 · WORK -->
 <section class="work work--page" id="work" aria-labelledby="work-title">
   <div class="work__head">
-    <h1 class="display misreg" id="work-title" data-text="portfolio">portfolio</h1>
+    <h1 class="display misreg" id="work-title" data-text="PORTFOLIO">PORTFOLIO</h1>
     <div class="filters" role="group" aria-label="Filter work">
       <button type="button" aria-pressed="true" data-filter="all">All</button>
+      <button type="button" aria-pressed="false" data-filter="photo">Photo &amp; Styling <small>shotbyscar</small></button>
       <button type="button" aria-pressed="false" data-filter="graphics">Graphics</button>
       <button type="button" aria-pressed="false" data-filter="logo">Logo Design</button>
       <button type="button" aria-pressed="false" data-filter="merch">Merch</button>
-      <button type="button" aria-pressed="false" data-filter="photo">Photo &amp; Styling <small>shotbyscar</small></button>
     </div>
     <p class="work__note">Captions read client / work / year.</p>
   </div>
@@ -56,27 +55,19 @@
       <figcaption><strong>Working Girl Collective</strong><span>Summer BBQ · photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece reveal" data-cat="graphics">
-      <div class="media"><img src="assets/work/bella-dona-pendeja-sticker.webp" width="900" height="1125" alt="Pink bubble-letter sticker reading Stop Being a Pendeja over a repeating pink pattern, with a Bella Doña mark" loading="lazy" decoding="async"></div>
-      <figcaption><strong>Bella Doña</strong><span>“Stop Being a Pendeja” sticker graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
-    <figure class="piece reveal" data-cat="logo">
-      <div class="media"><img src="assets/work/ab-gonzalez-logo.webp" width="900" height="900" alt="Black wordmark: AB above GONZALEZ set in an arc" loading="lazy" decoding="async"></div>
-      <figcaption><strong>AB Gonzalez</strong><span>Logo design</span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
-    <figure class="piece reveal" data-cat="merch">
-      <picture class="media">
-        <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/bella-dona-lucky-me-tote-still.webp">
-        <img src="assets/work/bella-dona-lucky-me-tote.webp" width="800" height="1000" alt="Hand with pink nails holding a red tote bag printed Lucky Me I’m Latina, Bella Doña" loading="lazy" decoding="async">
-      </picture>
-      <figcaption><strong>Bella Doña</strong><span>“Lucky Me I’m Latina” tote · ticket exclusive</span><span class="confirm">[CONFIRM] year</span></figcaption>
-    </figure>
-
     <figure class="piece reveal" data-cat="photo">
       <div class="media"><img src="assets/work/kt-fitness.webp" width="900" height="1348" alt="Silhouetted woman posed on gym equipment under deep blue light" loading="lazy" decoding="async"></div>
       <figcaption><strong>KT Fitness</strong><span>Photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    </figure>
+
+    <figure class="piece reveal" data-cat="photo">
+      <div class="media"><img src="assets/work/bday-shoot-karina.webp" width="900" height="1348" alt="Woman holding a white cake in front of silver 33 balloons" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bday Shoot: Karina</strong><span>Photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    </figure>
+
+    <figure class="piece reveal" data-cat="graphics">
+      <div class="media"><img src="assets/work/bella-dona-pendeja-sticker.webp" width="900" height="1125" alt="Pink bubble-letter sticker reading Stop Being a Pendeja over a repeating pink pattern, with a Bella Doña mark" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bella Doña</strong><span>“Stop Being a Pendeja” sticker graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
     <figure class="piece reveal" data-cat="graphics">
@@ -90,13 +81,13 @@
     </figure>
 
     <figure class="piece reveal" data-cat="logo">
-      <div class="media"><img src="assets/work/bawse-beauty-world-logo.webp" width="900" height="662" alt="Chrome script BW monogram with a heart on black" loading="lazy" decoding="async"></div>
-      <figcaption><strong>Bawse Beauty World</strong><span>Logo design</span><span class="confirm">[CONFIRM] client name</span><span class="confirm">[CONFIRM] year</span></figcaption>
+      <div class="media"><img src="assets/work/ab-gonzalez-logo.webp" width="900" height="900" alt="Black wordmark: AB above GONZALEZ set in an arc" loading="lazy" decoding="async"></div>
+      <figcaption><strong>AB Gonzalez</strong><span>Logo design</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece reveal" data-cat="merch">
-      <div class="media"><img src="assets/work/loteria-tee.webp" width="900" height="1125" alt="Back view of a man wearing a brown tee printed with a grid of illustrated character cards" loading="lazy" decoding="async"></div>
-      <figcaption><strong><span class="confirm">[CONFIRM] client</span></strong><span>Tee graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="logo">
+      <div class="media"><img src="assets/work/bawse-beauty-world-logo.webp" width="900" height="662" alt="Chrome script BW monogram with a heart on black" loading="lazy" decoding="async"></div>
+      <figcaption><strong>Bawse Beauty World</strong><span>Logo design</span><span class="confirm">[CONFIRM] client name</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
     <figure class="piece reveal" data-cat="logo">
@@ -104,9 +95,17 @@
       <figcaption><strong>Working Girl Collective</strong><span>Logo keychain</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
-    <figure class="piece reveal" data-cat="photo">
-      <div class="media"><img src="assets/work/bday-shoot-karina.webp" width="900" height="1348" alt="Woman holding a white cake in front of silver 33 balloons" loading="lazy" decoding="async"></div>
-      <figcaption><strong>Bday Shoot: Karina</strong><span>Photography &amp; styling</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    <figure class="piece reveal" data-cat="merch">
+      <picture class="media">
+        <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/bella-dona-lucky-me-tote-still.webp">
+        <img src="assets/work/bella-dona-lucky-me-tote.webp" width="800" height="1000" alt="Hand with pink nails holding a red tote bag printed Lucky Me I’m Latina, Bella Doña" loading="lazy" decoding="async">
+      </picture>
+      <figcaption><strong>Bella Doña</strong><span>“Lucky Me I’m Latina” tote · ticket exclusive</span><span class="confirm">[CONFIRM] year</span></figcaption>
+    </figure>
+
+    <figure class="piece reveal" data-cat="merch">
+      <div class="media"><img src="assets/work/loteria-tee.webp" width="900" height="1125" alt="Back view of a man wearing a brown tee printed with a grid of illustrated character cards" loading="lazy" decoding="async"></div>
+      <figcaption><strong><span class="confirm">[CONFIRM] client</span></strong><span>Tee graphic</span><span class="confirm">[CONFIRM] year</span></figcaption>
     </figure>
 
   </div>
@@ -135,11 +134,11 @@
 <footer class="contact contact--foot">
   <div class="contact__legal">
     <span>© SCAR 2026</span>
-    <span class="contact__spec">Spec concept · placeholder slots awaiting real work</span>
+    <a class="contact__affiliates" href="affiliates.html">Affiliate links</a>
   </div>
-  <div class="contact__word" aria-hidden="true"><img src="assets/brand/scar-logo.webp" width="771" height="360" alt="" loading="lazy" decoding="async"></div>
+  <div class="contact__word" aria-hidden="true"><img src="assets/brand/scar-wordmark.webp" width="1200" height="379" alt="" loading="lazy" decoding="async"></div>
 </footer>
 
-<script src="script.js?v=20260916125705" defer></script>
+<script src="script.js?v=20260918095606" defer></script>
 </body>
 </html>

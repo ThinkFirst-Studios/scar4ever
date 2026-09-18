@@ -96,6 +96,9 @@ Every one of these was verified on her live site on 2026-09-16.
 The client questionnaire is kept short on purpose. Get these separately (call, DM or email):
 
 - Where form messages go; phone (y/n); target launch date
+- Booking tool decision (HoneyBook / Dubsado / scheduler + Stripe)
+- YouTube videos to feature; is there a separate @scar4ever IG?
+- More photo/video galleries; new scar4ever shop products when ready
 - Brand Identity Kit: $1,000 or $2,500 total?
 - Prices: Social Media Content Kit, IG Post/Flyer, website package; descriptions for those three
 - PSMD★ prices for every product
@@ -115,6 +118,8 @@ The client questionnaire is kept short on purpose. Get these separately (call, D
 |---|---|---|
 | 2026-09-16 | — | Lead added. Research complete, mockup brief written. |
 | 2026-09-16 | — | **Signed.** Mockup live at thinkfirststudios.github.io/scar4ever (noindex). Admin/CMS discussed. |
+| 2026-09-17 | email | Questionnaire sent (Google Doc). |
+| 2026-09-18 | email | Questionnaire answered. v1 backed up (tag `v1-pitch-mockup`, branch `v1-backup`, zip). v2 built: brand colours/fonts, photo-first, PSMD removed, follow + booking sections, affiliates page. |
 
 ---
 
