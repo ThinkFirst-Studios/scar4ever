@@ -91,6 +91,14 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ---
 
+## ⚠️ Before launch, no matter what
+
+- **Terms of Service** and **Privacy Policy** pages, linked in the footer of every page.
+- Needed because the site has a contact form (personal data) and will take deposits/payments.
+- She's in California → CCPA / CalOPPA expect a posted privacy policy.
+- Ask who supplies the wording: her own, a generator (Termly / iubenda), or reuse from Squarespace. TFS drafts a starting point only, clearly marked for her review.
+- Also confirm the cancellation / deposit terms shown on Services match what she actually enforces.
+
 ## Follow-up details (collect after the questionnaire)
 
 The client questionnaire is kept short on purpose. Get these separately (call, DM or email):

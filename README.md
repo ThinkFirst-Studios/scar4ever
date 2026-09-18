@@ -23,4 +23,5 @@
 3. Galleries: more photo/video work; YouTube videos to feature; whether a separate @scar4ever IG exists.
 4. Prices: Brand Identity Kit $1,000 vs $2,500; Content Kit; IG Post/Flyer; website package. Portfolio years and client credits.
 5. Admin/CMS so she can update everything herself (she asked for "everything").
-6. Launch: Squarespace-registered domain; no email on the domain today; remove `noindex` at switch-over.
+6. **Terms of Service + Privacy Policy — required before launch.** Contact form, email capture and any analytics mean she needs both, linked in the footer. Deposits/cancellation terms on the Services page must match what she actually enforces. Who's supplying the wording: her, a generator (Termly/iubenda), or carried over from Squarespace?
+7. Launch: Squarespace-registered domain; no email on the domain today; remove `noindex` at switch-over; redirects from the old URLs (including the removed `/psmd.html`).
