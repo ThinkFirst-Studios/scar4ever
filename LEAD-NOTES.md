@@ -93,6 +93,10 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ## 🔴 ACTION: email Stephanie for the original portfolio photos
 
+**Status 2026-09-19:** thumbnails for all 16 photography projects are in and now live on the site. Still need the **full sets** (multiple images per project) + years, so each project can become a gallery rather than a single frame.
+- ⚠️ File in `MADDISON HODGES/` is named `NOT YOUR BABE-Thumbnail.webp` — different photo to the Not Your Babe one, so treated as Maddison Hodges. Confirm with her.
+- ⚠️ **New Era × Bella Doña × Betty Boop** is now shown on the site (it's public on her own site). Get her written OK before launch.
+
 Her Squarespace portfolio pages don't give usable image files — the work is published as flattened/composite images and the page can only be saved as HTML, so nothing can be lifted at print or gallery quality.
 
 **Ask her for:** the original photo files (full resolution) for each project in `images/Portfolio/Photography & Styling/`, ideally one folder per project, plus the year and the client name for each. Dropbox / Drive / WeTransfer all fine.
