@@ -105,6 +105,8 @@ The client questionnaire is kept short on purpose. Get these separately (call, D
 
 - Where form messages go; phone (y/n); target launch date
 - Booking tool decision (HoneyBook / Dubsado / scheduler + Stripe)
+  - ✅ Verified 2026-09-19 from her live store: session checkout already offers **DEPOSIT ONLY / PAY IN FULL** (Squarespace product option + Stripe). So payment choice already exists — the gaps are self-serve **date picking** and **contracts**.
+  - ✅ Verified prices: Content Session Photo + Video from $150 (2h $580); Sticker Pack Design $200.
 - YouTube videos to feature; is there a separate @scar4ever IG?
 - More photo/video galleries; new scar4ever shop products when ready
 - Brand Identity Kit: $1,000 or $2,500 total?
