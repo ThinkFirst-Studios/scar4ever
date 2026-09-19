@@ -93,7 +93,16 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ## 🔴 ACTION: email Stephanie for the original portfolio photos
 
-**Status 2026-09-19:** thumbnails for all 16 photography projects are in and now live on the site. Still need the **full sets** (multiple images per project) + years, so each project can become a gallery rather than a single frame.
+**Status 2026-09-19:** all four folders supplied (Graphics 40, Logo Design 38, Merch 25, Photography 16 thumbnails). 77 pieces now live: 16 photo + 21 graphics + 23 logo + 17 merch — curated from 119 source files (duplicates and alternate logo versions left out; the rest are on file if she wants more shown).
+
+**Left off the site deliberately:**
+- `social+banner+psmd.webp`, `PSMD+logo+official.webp` — she asked for no PSMD content.
+- `Screenshot+2023-07-25…` (Kobe) — likeness plus the 1996 draft photo of him at 17.
+- `Soulful+Karol+G`, `Soulful+Selena` — celebrity likenesses.
+- Three merch photos modelled by young children (`3.35.25`, `3.36.27`, `3.36.43`) — no-minors rule. The flat-lay versions of the same kids' garments are shown instead.
+- Duplicate/alternate logo files (Cherry Baby ×3, YBB ×4, Mars Glam ×2, Young Bull ×3 etc.) — one per client.
+
+**Captions need her input:** every piece is `[CONFIRM] year`, and six merch pieces are `[CONFIRM] client` (DESSXMX hoodies, LA Soul / Have Soul / Souls in Blue tees, Qué Chimba illustration, skate decks, loteria tee). Still need the **full sets** (multiple images per project) + years, so each project can become a gallery rather than a single frame.
 - ⚠️ File in `MADDISON HODGES/` is named `NOT YOUR BABE-Thumbnail.webp` — different photo to the Not Your Babe one, so treated as Maddison Hodges. Confirm with her.
 - ⚠️ **New Era × Bella Doña × Betty Boop** is now shown on the site (it's public on her own site). Get her written OK before launch.
 
