@@ -109,6 +109,7 @@ The client questionnaire is kept short on purpose. Get these separately (call, D
   - ✅ Verified prices: Content Session Photo + Video from $150 (2h $580); Sticker Pack Design $200.
   - ✅ Website package (verified 2026-09-19): **from $550**, 4–8 week timeline, full inclusion list, payment options **Deposit only / Half payment / Pay in full**, plus payment plans up to 4 months (invoiced separately). Note: her own package includes uploading privacy policy + terms — she already expects those pages.
   - Social Media Content Kit has 4 packages: **5 posts / 10 posts / 5 Reels-TikToks / 10 Reels-TikToks** — need the price of each and which one the "from $750" refers to.
+  - Instagram Post / Flyer has rush options: **No rush / 3 day / 2 day / Next day** — need the fee for each.
   - Logo Design checkout has 3 payment options: **One single logo** / **Deposit for logo package** / **Pay in full** — need the price of each (site shows "from $550").
   - 🚩 Brand Identity Kit has **3 tiers** on her store (package dropdown): **CEO** (the $1,000 listing), **BOSS**, **Orange**. Need price + inclusions for BOSS and Orange, and the $1,000 vs $2,500 answer.
 - YouTube videos to feature; is there a separate @scar4ever IG?
