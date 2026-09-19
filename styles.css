@@ -983,7 +983,8 @@ figcaption strong {
 }
 .tiers__item--current { border-color: var(--pink); background: linear-gradient(120deg, rgba(255,0,135,.18), transparent 70%); }
 .tiers__item--current b { color: var(--pink); }
-@media (min-width: 700px) { .tiers { grid-template-columns: repeat(3, 1fr); } .tiers__item { flex-direction: column; align-items: flex-start; } }
+@media (min-width: 700px) { .tiers { grid-template-columns: repeat(3, 1fr); } .tiers--four { grid-template-columns: repeat(2, 1fr); } .tiers__item { flex-direction: column; align-items: flex-start; } }
+@media (min-width: 1200px) { .tiers--four { grid-template-columns: repeat(4, 1fr); } }
 
 /* ---------- legal pages ---------- */
 .legal {
