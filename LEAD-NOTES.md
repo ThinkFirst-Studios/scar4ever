@@ -106,6 +106,7 @@ The client questionnaire is kept short on purpose. Get these separately (call, D
 - Where form messages go; phone (y/n); target launch date
 - Booking tool decision (HoneyBook / Dubsado / scheduler + Stripe)
   - ✅ Verified 2026-09-19 from her live store: session checkout already offers **DEPOSIT ONLY / PAY IN FULL** (Squarespace product option + Stripe). So payment choice already exists — the gaps are self-serve **date picking** and **contracts**.
+  - ✅ All **7 photo sessions checked one by one** (Product Shots, Brand Lookbook, Senior Portraits, Content Session, Couples, Maternity, Family, Birthday): identical copy, identical terms, from $150 / 2h $580, deposit-or-full. The shared "How sessions work" box on the site is accurate for all of them — no per-session differences to chase.
   - ✅ Verified prices: Content Session Photo + Video from $150 (2h $580); Sticker Pack Design $200.
   - ✅ Website package (verified 2026-09-19): **from $550**, 4–8 week timeline, full inclusion list, payment options **Deposit only / Half payment / Pay in full**, plus payment plans up to 4 months (invoiced separately). Note: her own package includes uploading privacy policy + terms — she already expects those pages.
   - Social Media Content Kit has 4 packages: **5 posts / 10 posts / 5 Reels-TikToks / 10 Reels-TikToks** — need the price of each and which one the "from $750" refers to.
