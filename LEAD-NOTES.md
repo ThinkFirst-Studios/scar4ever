@@ -91,6 +91,16 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ---
 
+## 🔴 ACTION: email Stephanie for the original portfolio photos
+
+Her Squarespace portfolio pages don't give usable image files — the work is published as flattened/composite images and the page can only be saved as HTML, so nothing can be lifted at print or gallery quality.
+
+**Ask her for:** the original photo files (full resolution) for each project in `images/Portfolio/Photography & Styling/`, ideally one folder per project, plus the year and the client name for each. Dropbox / Drive / WeTransfer all fine.
+
+Folders are already created and waiting for: WKGGRL Summer BBQ · Bday Shoot Karina · KT Fitness · High Rollers "Camo" · High Rollers "Don't Crash Out" · New Era × Bella Doña × Betty Boop · WKGGRL Cyber Stone · WKGGRL × Chergoodeats · WKGGRL "PTO" Lookbook · WKGGRL "Hotline Trucker" · Lash Daddie · Lash Drip LA · Not Your Babe · Maddison Hodges · California Bliss · Drea 4 Scar.
+
+Also confirm with her: which projects can be shown publicly (especially New Era × Bella Doña × Betty Boop).
+
 ## ⚠️ Before launch, no matter what
 
 - **Terms of Service** and **Privacy Policy** pages, linked in the footer of every page.
