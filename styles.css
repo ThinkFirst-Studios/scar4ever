@@ -970,6 +970,35 @@ figcaption strong {
 .contact__affiliates { color: var(--muted); text-decoration: underline; text-underline-offset: 4px; }
 .contact__affiliates:hover { color: var(--pink); }
 
+/* ---------- legal pages ---------- */
+.legal {
+  max-width: 78ch; margin-inline: auto;
+  padding: clamp(7rem, 14vw, 10rem) var(--gut) clamp(3rem, 8vw, 6rem);
+}
+.legal__draft {
+  margin: 0 0 28px;
+  padding: 14px 16px;
+  border: 2px dashed var(--pink);
+  color: var(--white);
+}
+.legal__updated { color: var(--muted); margin: 8px 0 32px; }
+.legal__body h2 {
+  margin: 2.2em 0 .6em;
+  font: 400 clamp(1.25rem, 2.6vw, 1.75rem)/1.1 var(--f-display);
+  text-transform: uppercase; letter-spacing: -.04em;
+  color: var(--pink);
+}
+.legal__body p, .legal__body li { font-size: 1rem; color: var(--white); }
+.legal__body ul { padding-left: 1.2em; display: grid; gap: 8px; }
+.legal__body li::marker { color: var(--pink); }
+.legal__body a { color: var(--pink); }
+.contact__links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.contact__links a {
+  min-height: 28px; display: inline-flex; align-items: center;
+  color: var(--muted); text-decoration: underline; text-underline-offset: 4px;
+}
+.contact__links a:hover { color: var(--pink); }
+
 /* ---------- reveals ---------- */
 .js .reveal {
   opacity: 0;
