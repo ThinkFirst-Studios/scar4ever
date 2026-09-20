@@ -11,6 +11,8 @@ export default defineConfig({
   title: 'SCAR',
   projectId: 'ouk6ju6k',
   dataset: 'production',
+  // self-hosted alongside the site
+  basePath: process.env.SANITY_STUDIO_BASEPATH || '/',
   plugins: [
     structureTool({
       structure: (S, context) =>
