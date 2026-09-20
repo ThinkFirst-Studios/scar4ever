@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Page not found | SCAR</title>
+<link rel="stylesheet" href="/styles.css">
+<script>
+  // The admin is a single-page app: any deep link under /admin is handled by
+  // the app itself, so send it back to the admin entry point.
+  (function () {
+    var p = location.pathname
+    var i = p.indexOf('/admin')
+    if (i !== -1) {
+      location.replace(p.slice(0, i + '/admin'.length) + '/')
+    }
+  })()
+</script>
+<style>
+  .nf { max-width: 60ch; margin-inline: auto; padding: clamp(7rem, 14vw, 10rem) var(--gut) 6rem; }
+  .nf p { font-size: 1.125rem; }
+</style>
+</head>
+<body class="page-404">
+<main class="nf">
+  <h1 class="display misreg" data-text="NOT FOUND">NOT FOUND</h1>
+  <p>That page doesn’t exist.</p>
+  <p><a class="btn" href="/">back to home</a></p>
+</main>
+</body>
+</html>
