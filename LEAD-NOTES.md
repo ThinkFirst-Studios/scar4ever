@@ -107,6 +107,13 @@ Free plan = **public dataset**. Anyone with the project ID can read all document
 - Pre-launch check: query the dataset with the project ID alone and confirm everything returned is meant to be public.
 - Trial note: Growth trial ends ~2026-10-20 and auto-downgrades to Free.
 
+## 🔴 ACTION: mention the admin login in the email to Stephanie
+
+She needs a **free Sanity account** to use her admin — it isn't a username/password we hand over.
+How it works: we invite `contact.scarmosttdope@gmail.com` from the project's **Members** tab → she gets an email → she signs up (Google sign-in is the easiest) → she lands in her admin.
+Say in the email: "You'll get an invite from Sanity — that's the login for your website admin. Sign in with Google and you're in. It's free and there's nothing to install."
+Free plan allows up to 20 users, so her seat costs nothing.
+
 ## 🔧 Admin spec (from Alex, 2026-09-20)
 
 Client must be able to:
