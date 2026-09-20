@@ -105,6 +105,8 @@ Current setup is a stopgap, not the final one:
 
 **Her admin is self-hosted at `/admin`** (Sanity's hosted deploy fails: the orderable-document-list plugin breaks `sanity schema extract`). Now: https://thinkfirst-studios.github.io/scar4ever/admin/ → at launch: scar4ever.com/admin.
 
+⚠️ Known quirk on the preview host: the Studio's router re-applies its basePath, so URLs look like `/scar4ever/admin/scar4ever/admin/structure`. The app works; a refreshed deep link is caught by `web/public/404.html` and sent back to `/admin/`. Goes away once the admin is served from a root path (Netlify `scar4ever.com/admin` or an `admin.` subdomain).
+
 **At launch, replace all of it with Netlify:**
 1. Connect the repo in Netlify (config already in `netlify.toml`).
 2. Swap the Sanity webhook to Netlify's build hook URL (no token needed).
