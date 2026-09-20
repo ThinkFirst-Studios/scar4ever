@@ -61,6 +61,17 @@ export const getSettings = () =>
     email, responseTime, markets, bookingUrl, sessionTerms
   }`)
 
+export const getInstagramPosts = () =>
+  client.fetch(
+    `*[_type == "instagramPost" && hidden != true] | order(orderRank asc){_id, url, note}`,
+  )
+
+/** Pull the shortcode out of any Instagram post/reel link */
+export function instagramCode(url = '') {
+  const m = String(url).match(/instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/)
+  return m ? m[1] : null
+}
+
 /** Pull the id out of any YouTube url so we can embed it */
 export function youtubeId(url = '') {
   const m = String(url).match(

@@ -57,6 +57,13 @@ export default defineConfig({
                     ),
                   ),
               ),
+            orderableDocumentListDeskItem({
+              type: 'instagramPost',
+              id: 'instagram-posts',
+              title: 'Instagram posts',
+              S,
+              context,
+            }),
             S.divider(),
             S.listItem()
               .title('Site settings')

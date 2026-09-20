@@ -2,9 +2,15 @@
 import Base from '../layouts/Base.astro'
 import Piece from '../components/Piece.astro'
 import ServiceCard from '../components/ServiceCard.astro'
-import {getPortfolio, getServices, getSettings, youtubeId} from '../lib/sanity.js'
+import {getPortfolio, getServices, getSettings, getInstagramPosts, youtubeId, instagramCode} from '../lib/sanity.js'
 
-const [items, services, settings] = await Promise.all([getPortfolio(), getServices(), getSettings()])
+const [items, services, settings, igPosts] = await Promise.all([
+  getPortfolio(),
+  getServices(),
+  getSettings(),
+  getInstagramPosts(),
+])
+const igEmbeds = igPosts.map((p) => ({...p, code: instagramCode(p.url)})).filter((p) => p.code).slice(0, 6)
 const featured = items.filter((i) => i.featured)
 const selected = (featured.length ? featured : items).slice(0, 8)
 const svcFeatured = services.filter((s) => s.featured && s.price)
@@ -112,11 +118,6 @@ const markets = settings?.markets || ['Honolulu HI', 'El Paso TX', 'Los Angeles 
     <a class="follow__card follow__card--ig reveal" href={igUrl} target="_blank" rel="noopener">
       <span class="follow__label">Instagram</span>
       <span class="follow__handle">{ig}</span>
-      <span class="follow__feed" aria-hidden="true">
-        <span class="follow__tile"><span class="confirm">[IG FEED]</span></span>
-        <span class="follow__tile"></span><span class="follow__tile"></span>
-        <span class="follow__tile"></span><span class="follow__tile"></span><span class="follow__tile"></span>
-      </span>
       <span class="follow__go">Follow ↗</span>
     </a>
 
@@ -141,41 +142,33 @@ const markets = settings?.markets || ['Honolulu HI', 'El Paso TX', 'Los Angeles 
       <a class="follow__go" href={ytUrl} target="_blank" rel="noopener">Watch on YouTube ↗</a>
     </div>
   </div>
+
+  {igEmbeds.length === 0 && (
+    <p class="follow__note follow__note--empty">
+      <span class="confirm">[CONFIRM] Instagram posts to feature — paste post links in your admin</span>
+    </p>
+  )}
+
+  {igEmbeds.length > 0 && (
+    <ul class="ig-grid">
+      {igEmbeds.map((post) => (
+        <li class="ig-grid__item reveal">
+          <iframe
+            src={`https://www.instagram.com/p/${post.code}/embed`}
+            title={post.note || 'Instagram post'}
+            loading="lazy"
+            scrolling="no"
+            allowtransparency="true"
+          ></iframe>
+        </li>
+      ))}
+    </ul>
+  )}
 </section>
 
 <div class="ticker ticker--rev" aria-hidden="true">
   <div class="ticker__track"><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b></div>
 </div>
-
-<!-- 5b · FOLLOW -->
-<section class="follow" id="follow" aria-labelledby="follow-title">
-  <div class="follow__head">
-    <h2 class="display misreg" id="follow-title" data-text="FOLLOW">FOLLOW</h2>
-    <p class="follow__note">New work, shoots and behind-the-scenes.</p>
-  </div>
-
-  <div class="follow__grid">
-    <a class="follow__card follow__card--ig reveal" href="https://www.instagram.com/scarmosttdope/" target="_blank" rel="noopener">
-      <span class="follow__label">Instagram</span>
-      <span class="follow__handle">@scarmosttdope</span>
-      <span class="follow__meta"><span class="confirm">[CONFIRM] is there a separate @scar4ever page?</span></span>
-      <span class="follow__feed" aria-hidden="true">
-        <span class="follow__tile"><span class="confirm">[IG FEED]</span></span>
-        <span class="follow__tile"></span><span class="follow__tile"></span>
-        <span class="follow__tile"></span><span class="follow__tile"></span><span class="follow__tile"></span>
-      </span>
-      <span class="follow__go">Follow ↗</span>
-    </a>
-
-    <a class="follow__card follow__card--yt reveal" href="https://www.youtube.com/@scarmosttdope" target="_blank" rel="noopener">
-      <span class="follow__label">YouTube</span>
-      <span class="follow__handle">@scarmosttdope</span>
-      <span class="follow__meta"><span class="confirm">[CONFIRM] videos to feature</span></span>
-      <span class="follow__player" aria-hidden="true"><span class="follow__play"></span></span>
-      <span class="follow__go">Watch ↗</span>
-    </a>
-  </div>
-</section>
 
 <!-- 4 · ABOUT / MANIFESTO -->
 <section class="about" id="about" aria-labelledby="about-title">
