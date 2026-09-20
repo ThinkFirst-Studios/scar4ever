@@ -1,0 +1,73 @@
+---
+const {
+  title,
+  description = 'Stephanie "SCAR" Cardona — photographer, content creator and graphic designer in Los Angeles. Photo and video sessions, brand lookbooks, branding and design.',
+  page = '',
+  bodyClass = '',
+  preloadHero = false,
+} = Astro.props
+
+const v = '20260920'
+const nav = [
+  {href: '/', label: 'home', key: 'index'},
+  {href: '/portfolio/', label: 'portfolio', key: 'portfolio'},
+  {href: '/services/', label: 'services', key: 'services'},
+  {href: '/contact/', label: 'contact', key: 'contact'},
+]
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex, nofollow">
+<!-- v2 — client build. Not launched: noindex stays until DNS switch. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<link rel="preload" as="image" href="/assets/brand/scar-wordmark.webp">
+{preloadHero && <link rel="preload" as="image" href="/assets/brand/scar-hero-720.webp" media="(max-width: 899px)" />}
+<link rel="stylesheet" href={`/styles.css?v=${v}`}>
+<script is:inline>document.documentElement.classList.add('js')</script>
+</head>
+<body class={`page-${page} ${bodyClass}`.trim()}>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar" id="top">
+  <a class="bar__mark" href="/"><img src="/assets/brand/scar-wordmark-sm.webp" width="260" height="82" alt="scar — home"></a>
+  <nav class="bar__nav" id="site-nav" aria-label="Main">
+    {nav.map((n) => (
+      <a href={n.href} data-text={n.label} aria-current={page === n.key ? 'page' : undefined}>{n.label}</a>
+    ))}
+  </nav>
+  <a class="bar__cta" href="/contact/">book a session</a>
+  <button class="bar__toggle" type="button" aria-expanded="false" aria-controls="site-nav">menu</button>
+</header>
+
+<main id="main">
+<slot />
+</main>
+
+<footer class="contact contact--foot">
+  <div class="contact__legal">
+    <span>© SCAR 2026</span>
+    <span class="contact__links">
+      <a href="/affiliates/">Affiliate links</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+    </span>
+  </div>
+  <div class="contact__word" aria-hidden="true">
+    <img src="/assets/brand/scar-wordmark.webp" width="1200" height="379" alt="" loading="lazy" decoding="async">
+  </div>
+</footer>
+
+<script is:inline src={`/script.js?v=${v}`} defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro'
+import ServiceDetail from '../components/ServiceDetail.astro'
+import {getServices, getSettings, GROUPS} from '../lib/sanity.js'
+
+const [services, settings] = await Promise.all([getServices(), getSettings()])
+const terms = settings?.sessionTerms || []
+const groups = GROUPS.map((g) => ({...g, items: services.filter((s) => s.group === g.value)})).filter(
+  (g) => g.items.length,
+)
+const IG = 'https://www.instagram.com/scarmosttdope/'
+---
+<Base
+  title="Services | SCAR — Stephanie Cardona"
+  description="Services — photography, video &amp; content, branding, social media, graphic design and websites by SCAR."
+  page="services"
+>
+<section class="services services--page" id="services" aria-labelledby="services-title">
+  <div class="services__head">
+    <h1 class="display misreg" id="services-title" data-text="SERVICES">SERVICES</h1>
+    <nav class="jump" aria-label="Service categories">
+      {groups.map((g) => <a href={`#${g.value}`}>{g.title}</a>)}
+    </nav>
+  </div>
+
+  {groups.map((g) => (
+    <section class="svc-group" id={g.value} aria-labelledby={`g-${g.value}`}>
+      <h2 class="svc-group__title" id={`g-${g.value}`}>{g.title}</h2>
+      {g.items.map((s) => <ServiceDetail service={s} terms={terms} />)}
+    </section>
+  ))}
+
+  <div class="services__cta">
+    <a class="btn" href="/contact/">book a session</a>
+    <a class="btn btn--ghost" href={IG} target="_blank" rel="noopener">questions? DM on Instagram ↗</a>
+  </div>
+</section>
+</Base>

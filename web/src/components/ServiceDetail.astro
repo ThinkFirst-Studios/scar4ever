@@ -1,0 +1,58 @@
+---
+import {img, dims} from '../lib/sanity.js'
+const {service, terms = []} = Astro.props
+const s = service
+const d = s.image ? dims(s.image, 560) : null
+const options = s.options || []
+const includes = s.includes || []
+const IG = 'https://www.instagram.com/scarmosttdope/'
+---
+<article class="svc-detail reveal">
+  {s.image && (
+    <div class="svc-detail__media">
+      <img src={img(s.image, 560)} width={d.width} height={d.height} alt={s.alt || s.title} loading="lazy" decoding="async" />
+    </div>
+  )}
+  <div class="svc-detail__body">
+    {s.tier && <p class="svc-detail__tier">{s.tier}</p>}
+    <h3 class="svc-detail__name">{s.title}</h3>
+    {s.price
+      ? <p class="svc-detail__price">{s.price}{s.priceNote && <span> {s.priceNote}</span>}</p>
+      : <p class="svc-detail__price"><span class="confirm">[CONFIRM] price</span></p>}
+
+    {s.lead && <p class="svc-detail__lead">{s.lead}</p>}
+
+    {options.length > 0 && (
+      <>
+        <h4 class="svc-detail__label">Options</h4>
+        <ul class={`tiers${options.length > 3 ? ' tiers--four' : ''}`}>
+          {options.map((o) => (
+            <li class={`tiers__item${o.highlight ? ' tiers__item--current' : ''}`}>
+              <b>{o.label}</b>
+              {o.price
+                ? <span>{o.price}</span>
+                : <span class="confirm">[CONFIRM] price</span>}
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    {includes.length > 0 && (
+      <>
+        <h4 class="svc-detail__label">What's included</h4>
+        <ul class="tags">{includes.map((i) => <li>{i}</li>)}</ul>
+      </>
+    )}
+
+    {s.body && <p>{s.body}</p>}
+
+    {s.showSessionTerms && terms.length > 0 && (
+      <div class="terms">
+        <h4 class="svc-detail__label">How sessions work</h4>
+        <ul class="terms__list">{terms.map((t) => <li>{t}</li>)}</ul>
+        <p class="terms__dm">Before purchasing, <a href={IG} target="_blank" rel="noopener">DM me on Instagram</a> to check the date and time are available. ♥</p>
+      </div>
+    )}
+  </div>
+</article>

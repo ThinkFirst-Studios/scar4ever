@@ -1,17 +1,220 @@
 ---
+import Base from '../layouts/Base.astro'
+import Piece from '../components/Piece.astro'
+import ServiceCard from '../components/ServiceCard.astro'
+import {getPortfolio, getServices, getSettings, youtubeId} from '../lib/sanity.js'
 
+const [items, services, settings] = await Promise.all([getPortfolio(), getServices(), getSettings()])
+const featured = items.filter((i) => i.featured)
+const selected = (featured.length ? featured : items).slice(0, 8)
+const svcFeatured = services.filter((s) => s.featured && s.price)
+const teaser = (svcFeatured.length ? svcFeatured : services).slice(0, 6)
+const videoId = youtubeId(settings?.featuredVideoUrl)
+const ig = settings?.instagramHandle || '@scarmosttdope'
+const yt = settings?.youtubeHandle || '@scarmosttdope'
+const igUrl = `https://www.instagram.com/${ig.replace('@', '')}/`
+const ytUrl = `https://www.youtube.com/${yt.startsWith('@') ? yt : '@' + yt}`
+const responseTime = settings?.responseTime || 'please allow 24 hours to get back to you'
+const markets = settings?.markets || ['Honolulu HI', 'El Paso TX', 'Los Angeles CA']
 ---
+<Base
+  title='Stephanie "SCAR" Cardona | Photo, Content &amp; Design | Los Angeles'
+  page="index"
+  preloadHero={true}
+>
+<!-- 1 · HERO -->
+<section class="hero" aria-labelledby="hero-title" data-tilt>
+  <div class="hero__media">
+    <img src="/assets/brand/scar-hero.webp" srcset="/assets/brand/scar-hero-720.webp 720w, /assets/brand/scar-hero.webp 1080w" sizes="(min-width: 900px) 42vw, 100vw" width="1080" height="1350" alt="Halftone collage of SCAR in cat-eye sunglasses, repeated across the frame, with a large pink SCAR wordmark, a star, and her SCAR manifesto" fetchpriority="high">
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <p class="hero__claim">
+    <span>photo + content</span>
+    <span class="hero__claim--out">maximalist</span>
+    <span>creative <b class="hero-star" role="img" aria-label="star"></b></span>
+  </p>
+
+  <div class="hero__copy">
+    <p class="hero__id">
+      <span>Stephanie Cardona</span>
+      <span>Photo · Content · Design</span>
+      <span>Los Angeles CA</span>
+    </p>
+    <h1 class="hero__word" id="hero-title"><img src="/assets/brand/scar-wordmark.webp" width="1200" height="379" alt="scar" fetchpriority="high"></h1>
+  </div>
+
+  <div class="hero__cta">
+    <a class="btn" href="/contact/">book a session</a>
+    <a class="btn btn--ghost" href="/portfolio/">see the work</a>
+  </div>
+
+  <a class="hero__cue" href="#work"><span>scroll</span><i aria-hidden="true"></i></a>
+</section>
+
+<!-- 2 · TICKER -->
+<div class="ticker" aria-label="Services: photo and video, content sessions, brand lookbooks, graphic design, branding, social media, websites">
+  <div class="ticker__track" aria-hidden="true">
+    <span>PHOTO + VIDEO</span><b>·</b><span>CONTENT SESSIONS</span><b>·</b><span>BRAND LOOKBOOKS</span><b>·</b><span>GRAPHIC DESIGN</span><b>·</b><span>BRANDING</span><b>·</b><span>SOCIAL MEDIA</span><b>·</b><span>WEBSITES</span><b>·</b>
+    <span>PHOTO + VIDEO</span><b>·</b><span>CONTENT SESSIONS</span><b>·</b><span>BRAND LOOKBOOKS</span><b>·</b><span>GRAPHIC DESIGN</span><b>·</b><span>BRANDING</span><b>·</b><span>SOCIAL MEDIA</span><b>·</b><span>WEBSITES</span><b>·</b>
+  </div>
+</div>
+
+<!-- 2b · WHAT SHE DOES -->
+<section class="statement reveal" aria-labelledby="statement-title">
+  <h2 class="sr-only" id="statement-title">What SCAR does</h2>
+  <p class="statement__lead">I don't just create visuals. My real passion is <em>building the world the brand belongs in</em>.</p>
+  <p class="statement__body">From concept and design to styling, photography, and content, I turn imagination into something people can see, feel, and believe in. My value is seeing the vision and having the range of skills to bring it to life.</p>
+  <ul class="statement__for">
+    <li>Content creators building a personal brand</li>
+    <li>Clothing brands</li>
+  </ul>
+</section>
+
+<!-- 3 · SELECTED WORK -->
+<section class="work" id="work" aria-labelledby="work-title">
+  <div class="work__head">
+    <h2 class="display misreg" id="work-title" data-text="SELECTED WORK">SELECTED WORK</h2>
+  </div>
+
+  <div class="grid" id="grid">
+    {selected.map((item) => <Piece item={item} width={800} />)}
+  </div>
+
+  <div class="more">
+    <a class="btn" href="/portfolio/">full portfolio →</a>
+  </div>
+</section>
+
+<!-- 3b · SERVICES TEASER -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="services__head">
+    <h2 class="display misreg" id="services-title" data-text="SERVICES">SERVICES</h2>
+  </div>
+  <ul class="svc-grid svc-grid--teaser">
+    {teaser.map((s) => <ServiceCard service={s} />)}
+  </ul>
+  <div class="services__cta">
+    <a class="btn" href="/contact/">book a session</a>
+    <a class="btn btn--ghost" href="/services/">all services →</a>
+  </div>
+</section>
+
+<!-- 5b · FOLLOW -->
+<section class="follow" id="follow" aria-labelledby="follow-title">
+  <div class="follow__head">
+    <h2 class="display misreg" id="follow-title" data-text="FOLLOW">FOLLOW</h2>
+    <p class="follow__note">New work, shoots and behind-the-scenes.</p>
+  </div>
+
+  <div class="follow__grid">
+    <a class="follow__card follow__card--ig reveal" href={igUrl} target="_blank" rel="noopener">
+      <span class="follow__label">Instagram</span>
+      <span class="follow__handle">{ig}</span>
+      <span class="follow__feed" aria-hidden="true">
+        <span class="follow__tile"><span class="confirm">[IG FEED]</span></span>
+        <span class="follow__tile"></span><span class="follow__tile"></span>
+        <span class="follow__tile"></span><span class="follow__tile"></span><span class="follow__tile"></span>
+      </span>
+      <span class="follow__go">Follow ↗</span>
+    </a>
+
+    <div class="follow__card follow__card--yt reveal">
+      <span class="follow__label">YouTube</span>
+      <span class="follow__handle">{yt}</span>
+      {videoId ? (
+        <span class="follow__player follow__player--live">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+            title={settings?.featuredVideoTitle || 'Featured video'}
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </span>
+      ) : (
+        <span class="follow__player" aria-hidden="true"><span class="follow__play"></span></span>
+      )}
+      {settings?.featuredVideoTitle && <span class="follow__caption">{settings.featuredVideoTitle}</span>}
+      {!videoId && <span class="follow__meta"><span class="confirm">[CONFIRM] featured video — set it in your admin</span></span>}
+      <a class="follow__go" href={ytUrl} target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker ticker--rev" aria-hidden="true">
+  <div class="ticker__track"><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b><span>BREAKING POINT</span><b>·</b><span>SURVIVAL</span><b>·</b><span>SELF-AWARENESS</span><b>·</b><span>SELF-ACCEPTANCE</span><b>·</b><span>PROOF</span><b>·</b><span>BECAUSE I SCAR</span><b>·</b></div>
+</div>
+
+<!-- 5b · FOLLOW -->
+<section class="follow" id="follow" aria-labelledby="follow-title">
+  <div class="follow__head">
+    <h2 class="display misreg" id="follow-title" data-text="FOLLOW">FOLLOW</h2>
+    <p class="follow__note">New work, shoots and behind-the-scenes.</p>
+  </div>
+
+  <div class="follow__grid">
+    <a class="follow__card follow__card--ig reveal" href="https://www.instagram.com/scarmosttdope/" target="_blank" rel="noopener">
+      <span class="follow__label">Instagram</span>
+      <span class="follow__handle">@scarmosttdope</span>
+      <span class="follow__meta"><span class="confirm">[CONFIRM] is there a separate @scar4ever page?</span></span>
+      <span class="follow__feed" aria-hidden="true">
+        <span class="follow__tile"><span class="confirm">[IG FEED]</span></span>
+        <span class="follow__tile"></span><span class="follow__tile"></span>
+        <span class="follow__tile"></span><span class="follow__tile"></span><span class="follow__tile"></span>
+      </span>
+      <span class="follow__go">Follow ↗</span>
+    </a>
+
+    <a class="follow__card follow__card--yt reveal" href="https://www.youtube.com/@scarmosttdope" target="_blank" rel="noopener">
+      <span class="follow__label">YouTube</span>
+      <span class="follow__handle">@scarmosttdope</span>
+      <span class="follow__meta"><span class="confirm">[CONFIRM] videos to feature</span></span>
+      <span class="follow__player" aria-hidden="true"><span class="follow__play"></span></span>
+      <span class="follow__go">Watch ↗</span>
+    </a>
+  </div>
+</section>
+
+<!-- 4 · ABOUT / MANIFESTO -->
+<section class="about" id="about" aria-labelledby="about-title">
+  <h2 class="sr-only" id="about-title">About SCAR</h2>
+  <div class="about__portrait reveal">
+    <div class="frame frame--photo"><img src="/assets/brand/scar-portrait.webp" width="800" height="1087" alt="Stephanie “SCAR” Cardona on a rooftop at dusk, hand in her hair, wearing an oversized printed mesh jersey" loading="lazy" decoding="async"></div>
+    <p class="about__bio">Photographer, content creator and graphic designer based in Los Angeles, working with South Bay Creative and Working Girl Collective.</p>
+  </div>
+
+  <blockquote class="manifesto" data-lit>
+    <p><em class="hit">SCAR</em>, more than the aftermath of a healed wound. It's everything that leads up to it : the breaking point, the survival, and everything that comes after. A <em class="hit">SCAR</em> tells the story of where you've been and what you've endured. Without a <em class="hit">SCAR</em>, there is no proof of struggle, hardship, and sacrifice.</p>
+    <p>Wearing your <em class="hit">SCAR</em> is an outward symbol of self-awareness, &amp; self-acceptance. A statement that says, <i>I am more than any obstacle life has thrown at me,</i> without saying it.</p>
+    <p class="manifesto__close">I am a human being human ... because I <span class="misreg manifesto__scar" data-text="SCAR">SCAR</span>.</p>
+  </blockquote>
+</section>
+
+<!-- 5 · LINKS -->
+<section class="links" id="elsewhere" aria-labelledby="links-title">
+  <h2 class="display misreg" id="links-title" data-text="ELSEWHERE">ELSEWHERE</h2>
+  <ul class="rows">
+    <li><a class="row" href="https://www.youtube.com/@scarmosttdope" target="_blank" rel="noopener">
+      <span class="row__name">YouTube</span><span class="row__meta">@scarmosttdope</span><span class="row__arrow" aria-hidden="true">↗</span></a></li>
+    <li><a class="row" href="https://wkggrl.com" target="_blank" rel="noopener">
+      <span class="row__name">Working Girl Collective</span><span class="row__meta">wkggrl.com</span><span class="row__arrow" aria-hidden="true">↗</span></a></li>
+    <li><a class="row" href="https://bluntcases.com/Scar" target="_blank" rel="noopener">
+      <span class="row__name">Blunt Phone Cases</span><span class="row__meta">15% off · code <b>SCAR</b></span><span class="row__arrow" aria-hidden="true">↗</span></a></li>
+    <li><a class="row" href="https://www.instagram.com/scarmosttdope/" target="_blank" rel="noopener">
+      <span class="row__name">Instagram</span><span class="row__meta">@scarmosttdope</span><span class="row__arrow" aria-hidden="true">↗</span></a></li>
+  </ul>
+</section>
+
+<!-- 6 · CONTACT CALLOUT -->
+<section class="contact" aria-labelledby="contact-title">
+  <p class="contact__kicker">ready when you are</p>
+  <h2 class="contact__title" id="contact-title">
+    <a href="/contact/" class="contact__cta">BOOK A SESSION<span aria-hidden="true">→</span></a>
+  </h2>
+  <p class="contact__steps"><b>1</b> Pick a date <b>2</b> Sign the contract <b>3</b> Pay a deposit or in full</p>
+  <p class="contact__note">“{responseTime}”</p>
+  <p class="contact__markets">{markets.map((m, i) => (<>{i > 0 && <b>·</b>} {m} </>))}</p>
+</section>
+</Base>

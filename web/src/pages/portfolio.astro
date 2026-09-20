@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro'
+import Piece from '../components/Piece.astro'
+import {getPortfolio, CATEGORIES} from '../lib/sanity.js'
+
+const items = await getPortfolio()
+---
+<Base
+  title="Portfolio | SCAR — Stephanie Cardona"
+  description="Portfolio — photography &amp; styling, graphics, logo design and merch by Stephanie &quot;SCAR&quot; Cardona."
+  page="portfolio"
+>
+<section class="work work--page" id="work" aria-labelledby="work-title">
+  <div class="work__head">
+    <h1 class="display misreg" id="work-title" data-text="PORTFOLIO">PORTFOLIO</h1>
+    <div class="filters" role="group" aria-label="Filter work">
+      <button type="button" aria-pressed="true" data-filter="all">All</button>
+      {CATEGORIES.map((c) => (
+        <button type="button" aria-pressed="false" data-filter={c.value}>
+          <Fragment set:html={c.title} />
+          {c.note && <small>{c.note}</small>}
+        </button>
+      ))}
+    </div>
+    <p class="work__note">Captions read client / work / year.</p>
+  </div>
+
+  <div class="grid" id="grid">
+    {items.map((item) => <Piece item={item} />)}
+  </div>
+
+  <p class="grid__empty" id="grid-empty" hidden>Nothing in this category yet.</p>
+</section>
+</Base>

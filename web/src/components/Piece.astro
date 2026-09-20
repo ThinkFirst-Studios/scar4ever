@@ -1,0 +1,24 @@
+---
+import {img, dims} from '../lib/sanity.js'
+const {item, width = 900} = Astro.props
+const {width: w, height: h} = dims(item.image, width)
+---
+<figure class="piece reveal" data-cat={item.category}>
+  <div class="media">
+    <img
+      src={img(item.image, width)}
+      width={w}
+      height={h}
+      alt={item.alt || item.title}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <figcaption>
+    <strong>{item.title}</strong>
+    {item.subtext && <span>{item.subtext}</span>}
+    {item.year
+      ? <span>{item.year}</span>
+      : <span class="confirm">[CONFIRM] year</span>}
+  </figcaption>
+</figure>

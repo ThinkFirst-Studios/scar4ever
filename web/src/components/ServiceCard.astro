@@ -1,0 +1,24 @@
+---
+import {img, dims} from '../lib/sanity.js'
+import {GROUPS} from '../lib/sanity.js'
+const {service} = Astro.props
+const group = GROUPS.find((g) => g.value === service.group)
+const d = service.image ? dims(service.image, 560) : null
+---
+<li class="svc reveal">
+  {service.image && (
+    <img
+      src={img(service.image, 560)}
+      width={d.width}
+      height={d.height}
+      alt={service.alt || service.title}
+      loading="lazy"
+      decoding="async"
+    />
+  )}
+  {group && <p class="svc__group">{group.title}</p>}
+  <h4 class="svc__name">{service.title}</h4>
+  {service.price
+    ? <span class="svc__price">{service.price}</span>
+    : <span class="confirm">[CONFIRM] price</span>}
+</li>

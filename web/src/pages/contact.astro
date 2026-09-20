@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro'
+import {getSettings} from '../lib/sanity.js'
+
+const settings = await getSettings()
+const email = settings?.email || 'contact.scarmosttdope@gmail.com'
+const responseTime = settings?.responseTime || 'please allow 24 hours to get back to you'
+const markets = settings?.markets || ['Honolulu HI', 'El Paso TX', 'Los Angeles CA']
+const bookingUrl = settings?.bookingUrl
+---
+<Base title="Book a Session | SCAR — Stephanie Cardona" description="Book a photo or content session with Stephanie &quot;SCAR&quot; Cardona — Honolulu HI · El Paso TX · Los Angeles CA." page="contact">
+<!-- CONTACT -->
+<section class="contact contact--page" aria-labelledby="contact-title">
+  <p class="contact__kicker">ready when you are</p>
+  <h1 class="contact__title" id="contact-title">
+    <a href={`mailto:${email}`} class="contact__cta">BOOK A SESSION<span aria-hidden="true">→</span></a>
+  </h1>
+  <p class="contact__email"><a href={`mailto:${email}`}>{email}</a></p>
+
+  <div class="booking">
+    <h2 class="booking__title">How booking works</h2>
+    <ol class="booking__steps">
+      <li><b>1</b><span><b>Pick your date.</b> Choose a session type and a time that works.</span></li>
+      <li><b>2</b><span><b>Sign the agreement.</b> Sent straight to your inbox.</span></li>
+      <li><b>3</b><span><b>Pay.</b> Deposit only to hold the date, or pay in full — your choice at checkout.</span></li>
+    </ol>
+    <p class="booking__note"><span class="confirm">[CONFIRM] booking tool — scheduler + contract + deposit (HoneyBook / Dubsado)</span></p>
+    <a class="btn" href="#enquiry">start an enquiry</a>
+  </div>
+
+  <div class="contact__grid">
+    <form class="form" id="enquiry" novalidate>
+      <div class="form__row">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="form__row">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="form__row">
+        <label for="f-service">What do you need?</label>
+        <select id="f-service" name="service">
+          <option value="">Choose a service</option>
+          <option>Video &amp; Content</option>
+          <option>Marketing Design</option>
+          <option>Branding</option>
+          <option>Websites</option>
+          <option>Social Media</option>
+          <option>Graphic Design</option>
+          <option>Photography</option>
+        </select>
+      </div>
+      <div class="form__row">
+        <label for="f-msg">Tell me about the project</label>
+        <textarea id="f-msg" name="message" rows="6" required></textarea>
+      </div>
+      <button class="btn" type="submit">send it</button>
+      <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <aside class="contact__side">
+      <p class="contact__note">“{responseTime}”</p>
+      <p class="contact__markets">{markets.map((m, i) => (<>{i > 0 && <b>·</b>} {m} </>))}</p>
+      <p class="contact__elsewhere">Instagram — <a href="https://www.instagram.com/scarmosttdope/" target="_blank" rel="noopener">@scarmosttdope</a></p>
+    </aside>
+  </div>
+</section>
+</Base>
