@@ -91,6 +91,20 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ---
 
+## 🔴 ACTION: Alex to send the remaining variant prices
+
+Select each option at checkout on her live store and screenshot the price that appears:
+Brand Identity Kit (BOSS, Orange) · Logo Design (one single logo, pay in full) · Website (half payment, pay in full) · Content Kit (5 posts, 10 posts, 5 Reels/TikToks, 10 Reels/TikToks) · Instagram Post/Flyer (3 day, 2 day, next day rush).
+
+## 🔧 Admin spec (from Alex, 2026-09-20)
+
+Client must be able to:
+1. Add portfolio pieces (upload image, set category).
+2. Edit the title and sub-text on portfolio pieces.
+3. **Reorder** pieces within each category (drag and drop).
+4. Add new services; edit service text, prices and sub-text.
+5. Change which YouTube video is featured.
+
 ## 🔴 ACTION: email Stephanie for the original portfolio photos
 
 **Status 2026-09-19:** all four folders supplied (Graphics 40, Logo Design 38, Merch 25, Photography 16 thumbnails). 77 pieces now live: 16 photo + 21 graphics + 23 logo + 17 merch — curated from 119 source files (duplicates and alternate logo versions left out; the rest are on file if she wants more shown).
