@@ -18,7 +18,7 @@ const items = await getPortfolio()
       {CATEGORIES.map((c) => (
         <button type="button" aria-pressed="false" data-filter={c.value}>
           <Fragment set:html={c.title} />
-          {c.note && <small>{c.note}</small>}
+          {c.note && <small> {c.note}</small>}
         </button>
       ))}
     </div>
