@@ -188,7 +188,7 @@ The client questionnaire is kept short on purpose. Get these separately (call, D
 | Date | Channel | What happened |
 |---|---|---|
 | 2026-09-16 | — | Lead added. Research complete, mockup brief written. |
-| 2026-09-16 | — | **Signed.** Mockup live at thinkfirststudios.github.io/scar4ever (noindex). Admin/CMS discussed. |
+| 2026-09-16 | — | **Signed.** Mockup live at thinkfirst-studios.github.io/scar4ever (noindex). Admin/CMS discussed. |
 | 2026-09-17 | email | Questionnaire sent (Google Doc). |
 | 2026-09-18 | email | Questionnaire answered. v1 backed up (tag `v1-pitch-mockup`, branch `v1-backup`, zip). v2 built: brand colours/fonts, photo-first, PSMD removed, follow + booking sections, affiliates page. |
 
