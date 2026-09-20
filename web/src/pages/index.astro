@@ -114,56 +114,61 @@ const markets = settings?.markets || ['Honolulu HI', 'El Paso TX', 'Los Angeles 
     <p class="follow__note">New work, shoots and behind-the-scenes.</p>
   </div>
 
-  <div class="follow__grid">
-    <a class="follow__card follow__card--ig reveal" href={igUrl} target="_blank" rel="noopener">
-      <span class="follow__label">Instagram</span>
-      <span class="follow__handle">{ig}</span>
-      <span class="follow__go">Follow ↗</span>
-    </a>
-
-    <div class="follow__card follow__card--yt reveal">
-      <span class="follow__label">YouTube</span>
-      <span class="follow__handle">{yt}</span>
-      {videoId ? (
-        <span class="follow__player follow__player--live">
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-            title={settings?.featuredVideoTitle || 'Featured video'}
-            loading="lazy"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </span>
-      ) : (
-        <span class="follow__player" aria-hidden="true"><span class="follow__play"></span></span>
-      )}
-      {settings?.featuredVideoTitle && <span class="follow__caption">{settings.featuredVideoTitle}</span>}
-      {!videoId && <span class="follow__meta"><span class="confirm">[CONFIRM] featured video — set it in your admin</span></span>}
-      <a class="follow__go" href={ytUrl} target="_blank" rel="noopener">Watch on YouTube ↗</a>
+  <div class="follow__card follow__card--ig reveal">
+    <div class="follow__bar">
+      <div>
+        <span class="follow__label">Instagram</span>
+        <span class="follow__handle">{ig}</span>
+      </div>
+      <a class="follow__go" href={igUrl} target="_blank" rel="noopener">Follow ↗</a>
     </div>
+
+    {igEmbeds.length > 0 ? (
+      <ul class="ig-grid">
+        {igEmbeds.map((post) => (
+          <li class="ig-grid__item">
+            <iframe
+              src={`https://www.instagram.com/p/${post.code}/embed/captioned`}
+              title={post.note || 'Instagram post'}
+              loading="lazy"
+              scrolling="no"
+              allowtransparency="true"
+            ></iframe>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="follow__note follow__note--empty">
+        <span class="confirm">[CONFIRM] Instagram posts to feature — paste post links in your admin</span>
+      </p>
+    )}
   </div>
 
-  {igEmbeds.length === 0 && (
-    <p class="follow__note follow__note--empty">
-      <span class="confirm">[CONFIRM] Instagram posts to feature — paste post links in your admin</span>
-    </p>
-  )}
+  <div class="follow__card follow__card--yt reveal">
+    <div class="follow__bar">
+      <div>
+        <span class="follow__label">YouTube</span>
+        <span class="follow__handle">{yt}</span>
+      </div>
+      <a class="follow__go" href={ytUrl} target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </div>
 
-  {igEmbeds.length > 0 && (
-    <ul class="ig-grid">
-      {igEmbeds.map((post) => (
-        <li class="ig-grid__item reveal">
-          <iframe
-            src={`https://www.instagram.com/p/${post.code}/embed`}
-            title={post.note || 'Instagram post'}
-            loading="lazy"
-            scrolling="no"
-            allowtransparency="true"
-          ></iframe>
-        </li>
-      ))}
-    </ul>
-  )}
+    {videoId ? (
+      <div class="follow__player follow__player--live">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+          title={settings?.featuredVideoTitle || 'Featured video'}
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    ) : (
+      <div class="follow__player" aria-hidden="true"><span class="follow__play"></span></div>
+    )}
+    {settings?.featuredVideoTitle && <p class="follow__caption">{settings.featuredVideoTitle}</p>}
+    {!videoId && <p class="follow__meta"><span class="confirm">[CONFIRM] featured video — set it in your admin</span></p>}
+  </div>
 </section>
 
 <div class="ticker ticker--rev" aria-hidden="true">
