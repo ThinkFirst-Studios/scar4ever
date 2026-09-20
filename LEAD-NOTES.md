@@ -99,11 +99,11 @@ Brand Identity Kit (BOSS, Orange) · Logo Design (one single logo, pay in full) 
 ## ⏳ INTERIM: rebuild plumbing (revisit before launch)
 
 Current setup is a stopgap, not the final one:
-- **GitHub Pages + Actions** builds the site; preview at https://thinkfirst-studios.github.io/scar4ever/
+- **GitHub Pages + Actions** builds the site; preview at https://thinkfirststudios.github.io/scar4ever/
 - **Sanity webhook → GitHub `repository_dispatch`** using a fine-grained PAT (Contents: read+write, this repo only). Publish → live in ~1–2 min.
 - ✅ Webhook verified working 2026-09-20 (Sanity → GitHub 204, build ~35s, live in ~1 min). The 15-minute cron fallback has been removed.
 
-**Her admin is self-hosted at `/admin`** (Sanity's hosted deploy fails: the orderable-document-list plugin breaks `sanity schema extract`). Now: https://thinkfirst-studios.github.io/scar4ever/admin/ → at launch: scar4ever.com/admin.
+**Her admin is self-hosted at `/admin`** (Sanity's hosted deploy fails: the orderable-document-list plugin breaks `sanity schema extract`). Now: https://thinkfirststudios.github.io/scar4ever/admin/ → at launch: scar4ever.com/admin.
 
 ⚠️ Known quirk on the preview host: the Studio's router re-applies its basePath, so URLs look like `/scar4ever/admin/scar4ever/admin/structure`. The app works; a refreshed deep link is caught by `web/public/404.html` and sent back to `/admin/`. Goes away once the admin is served from a root path (Netlify `scar4ever.com/admin` or an `admin.` subdomain).
 
@@ -112,7 +112,7 @@ Current setup is a stopgap, not the final one:
 2. Swap the Sanity webhook to Netlify's build hook URL (no token needed).
 4. **Revoke the GitHub PAT** and the Sanity `import` token.
 5. Point scar4ever.com at Netlify (web records only, never MX).
-6. Add a CORS origin for the live domain and **remove the `https://thinkfirst-studios.github.io` origin** (it allows credentialed requests from any page on that shared GitHub domain).
+6. Add a CORS origin for the live domain and **remove the `https://thinkfirststudios.github.io` origin** (and any leftover `thinkfirst-studios` entry) (it allows credentialed requests from any page on that shared GitHub domain).
 
 ## 🔒 Sanity security rules (project `ouk6ju6k`, org `oaktpd857`)
 
@@ -206,7 +206,7 @@ The client questionnaire is kept short on purpose. Get these separately (call, D
 | Date | Channel | What happened |
 |---|---|---|
 | 2026-09-16 | — | Lead added. Research complete, mockup brief written. |
-| 2026-09-16 | — | **Signed.** Mockup live at thinkfirst-studios.github.io/scar4ever (noindex). Admin/CMS discussed. |
+| 2026-09-16 | — | **Signed.** Mockup live at thinkfirststudios.github.io/scar4ever (noindex). Admin/CMS discussed. |
 | 2026-09-17 | email | Questionnaire sent (Google Doc). |
 | 2026-09-18 | email | Questionnaire answered. v1 backed up (tag `v1-pitch-mockup`, branch `v1-backup`, zip). v2 built: brand colours/fonts, photo-first, PSMD removed, follow + booking sections, affiliates page. |
 

@@ -5,7 +5,7 @@
 - Brief: `PROMPT.md`
 - Lead tracking: `LEAD-NOTES.md`
 - Preview: open `index.html` (or right-click -> Open with Live Server)
-- Live preview (noindex): https://thinkfirst-studios.github.io/scar4ever/
+- Live preview (noindex): https://thinkfirststudios.github.io/scar4ever/
 
 ## v2 (2026-09-18) — built from her questionnaire answers
 
