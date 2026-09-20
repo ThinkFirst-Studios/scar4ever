@@ -101,12 +101,11 @@ Brand Identity Kit (BOSS, Orange) · Logo Design (one single logo, pay in full) 
 Current setup is a stopgap, not the final one:
 - **GitHub Pages + Actions** builds the site; preview at https://thinkfirst-studios.github.io/scar4ever/
 - **Sanity webhook → GitHub `repository_dispatch`** using a fine-grained PAT (Contents: read+write, this repo only). Publish → live in ~1–2 min.
-- **15-minute cron rebuild** in `.github/workflows/deploy.yml` as a safety net.
+- ✅ Webhook verified working 2026-09-20 (Sanity → GitHub 204, build ~35s, live in ~1 min). The 15-minute cron fallback has been removed.
 
 **At launch, replace all of it with Netlify:**
 1. Connect the repo in Netlify (config already in `netlify.toml`).
 2. Swap the Sanity webhook to Netlify's build hook URL (no token needed).
-3. **Delete the cron schedule** from the workflow — it burns Actions minutes for nothing.
 4. **Revoke the GitHub PAT** and the Sanity `import` token.
 5. Point scar4ever.com at Netlify (web records only, never MX).
 

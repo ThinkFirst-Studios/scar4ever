@@ -6,10 +6,6 @@ on:
   workflow_dispatch: # "Run workflow" button
   repository_dispatch: # fired by the Sanity webhook when she publishes
     types: [sanity-publish]
-  schedule:
-    # stopgap until the Sanity webhook is wired up: rebuild every 15 minutes
-    # so a publish appears without anyone running anything
-    - cron: '*/15 * * * *'
 
 permissions:
   contents: read
