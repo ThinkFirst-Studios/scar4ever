@@ -96,6 +96,17 @@ Every one of these was verified on her live site on 2026-09-16.
 Select each option at checkout on her live store and screenshot the price that appears:
 Brand Identity Kit (BOSS, Orange) · Logo Design (one single logo, pay in full) · Website (half payment, pay in full) · Content Kit (5 posts, 10 posts, 5 Reels/TikToks, 10 Reels/TikToks) · Instagram Post/Flyer (3 day, 2 day, next day rush).
 
+## 🔒 Sanity security rules (project `ouk6ju6k`, org `oaktpd857`)
+
+Free plan = **public dataset**. Anyone with the project ID can read all documents **including unpublished drafts**.
+- Only public website content goes in Sanity: portfolio pieces, service copy/prices, site settings.
+- **Never** in Sanity: enquiry submissions, client contracts, invoices, NDA work, personal contact details.
+- Tell SCAR plainly: saving without publishing does **not** hide an unannounced drop.
+- Write tokens live only in server-side `.env` (gitignored). Never in `PUBLIC_*` vars or client code.
+- Revoke the `import` token once the migration is done.
+- Pre-launch check: query the dataset with the project ID alone and confirm everything returned is meant to be public.
+- Trial note: Growth trial ends ~2026-10-20 and auto-downgrades to Free.
+
 ## 🔧 Admin spec (from Alex, 2026-09-20)
 
 Client must be able to:
