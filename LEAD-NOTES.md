@@ -103,11 +103,14 @@ Current setup is a stopgap, not the final one:
 - **Sanity webhook → GitHub `repository_dispatch`** using a fine-grained PAT (Contents: read+write, this repo only). Publish → live in ~1–2 min.
 - ✅ Webhook verified working 2026-09-20 (Sanity → GitHub 204, build ~35s, live in ~1 min). The 15-minute cron fallback has been removed.
 
+**Her admin is self-hosted at `/admin`** (Sanity's hosted deploy fails: the orderable-document-list plugin breaks `sanity schema extract`). Now: https://thinkfirst-studios.github.io/scar4ever/admin/ → at launch: scar4ever.com/admin.
+
 **At launch, replace all of it with Netlify:**
 1. Connect the repo in Netlify (config already in `netlify.toml`).
 2. Swap the Sanity webhook to Netlify's build hook URL (no token needed).
 4. **Revoke the GitHub PAT** and the Sanity `import` token.
 5. Point scar4ever.com at Netlify (web records only, never MX).
+6. Add a CORS origin for the live domain and **remove the `https://thinkfirst-studios.github.io` origin** (it allows credentialed requests from any page on that shared GitHub domain).
 
 ## 🔒 Sanity security rules (project `ouk6ju6k`, org `oaktpd857`)
 
