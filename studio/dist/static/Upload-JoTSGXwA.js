@@ -1,0 +1,37 @@
+import { n as __exportAll, r as __toESM } from "./rolldown-runtime-DC62tzP2.js";
+import { n as require_react, t as require_jsx_runtime } from "./jsx-runtime-DwkYz3jI.js";
+//#region node_modules/@sanity/icons/dist/Upload.js
+var Upload_exports = /* @__PURE__ */ __exportAll({
+	UploadIcon: () => UploadIcon,
+	default: () => UploadIcon
+});
+var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
+var import_jsx_runtime = require_jsx_runtime();
+/**
+* @public
+*/
+var UploadIcon = /* @__PURE__ */ (0, import_react.forwardRef)(function UploadIcon(props, ref) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+		"data-sanity-icon": "upload",
+		width: "1em",
+		height: "1em",
+		viewBox: "0 0 25 25",
+		fill: "none",
+		xmlns: "http://www.w3.org/2000/svg",
+		...props,
+		ref,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+			d: "M12.5 6V15.5M5.5 15.5H19.5V19.5H5.5V15.5Z",
+			stroke: "currentColor",
+			strokeWidth: 1.2,
+			strokeLinejoin: "round"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+			d: "M7.5 11L12.5 6L17.5 11",
+			stroke: "currentColor",
+			strokeWidth: 1.2,
+			strokeLinejoin: "round"
+		})]
+	});
+});
+//#endregion
+export { Upload_exports as n, UploadIcon as t };

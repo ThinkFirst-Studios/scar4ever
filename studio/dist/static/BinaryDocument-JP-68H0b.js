@@ -1,0 +1,38 @@
+import { n as __exportAll, r as __toESM } from "./rolldown-runtime-DC62tzP2.js";
+import { n as require_react, t as require_jsx_runtime } from "./jsx-runtime-DwkYz3jI.js";
+//#region node_modules/@sanity/icons/dist/BinaryDocument.js
+var BinaryDocument_exports = /* @__PURE__ */ __exportAll({
+	BinaryDocumentIcon: () => BinaryDocumentIcon,
+	default: () => BinaryDocumentIcon
+});
+var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
+var import_jsx_runtime = require_jsx_runtime();
+/**
+* @public
+*/
+var BinaryDocumentIcon = /* @__PURE__ */ (0, import_react.forwardRef)(function BinaryDocumentIcon(props, ref) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+		"data-sanity-icon": "binary-document",
+		width: "1em",
+		height: "1em",
+		viewBox: "0 0 25 25",
+		fill: "none",
+		xmlns: "http://www.w3.org/2000/svg",
+		...props,
+		ref,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+			d: "M11.5 4.5V9.5H6.5",
+			stroke: "currentColor",
+			strokeWidth: 1.2,
+			strokeLinejoin: "round"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+			d: "M9.5 12.5V17.5M11.5 4.5H18.5V20.5H6.5V9.5L11.5 4.5ZM12.5 12.5V17.5H15.5V12.5H12.5Z",
+			stroke: "currentColor",
+			strokeWidth: 1.2,
+			strokeLinecap: "square",
+			strokeLinejoin: "round"
+		})]
+	});
+});
+//#endregion
+export { BinaryDocument_exports as n, BinaryDocumentIcon as t };

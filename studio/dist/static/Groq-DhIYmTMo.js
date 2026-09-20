@@ -1,0 +1,36 @@
+import { r as __toESM } from "./rolldown-runtime-DC62tzP2.js";
+import { n as require_react, t as require_jsx_runtime } from "./jsx-runtime-DwkYz3jI.js";
+//#region node_modules/@sanity/icons/dist/Groq.js
+var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
+var import_jsx_runtime = require_jsx_runtime();
+/**
+* @public
+*/
+var GroqIcon = /* @__PURE__ */ (0, import_react.forwardRef)(function GroqIcon(props, ref) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+		"data-sanity-icon": "groq",
+		width: "1em",
+		height: "1em",
+		viewBox: "0 0 25 25",
+		fill: "none",
+		xmlns: "http://www.w3.org/2000/svg",
+		...props,
+		ref,
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+				d: "M13 13H21L13 21L13 13Z",
+				fill: "currentColor"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+				d: "M12 12V4L4 12H12Z",
+				fill: "currentColor"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+				d: "M12 13H4L12 21V13Z",
+				fill: "currentColor"
+			})
+		]
+	});
+});
+//#endregion
+export { GroqIcon, GroqIcon as default };
