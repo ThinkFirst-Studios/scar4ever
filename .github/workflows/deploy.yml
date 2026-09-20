@@ -49,6 +49,12 @@ jobs:
         run: |
           mkdir -p web/dist/admin
           cp -r studio/dist/* web/dist/admin/
+          # TEMPORARY: on this host the studio's router re-applies its basePath,
+          # so once you're logged in it lazy-loads chunks from
+          # /admin/scar4ever/admin/static/... Serving a second copy there keeps
+          # it working. Remove when the admin moves to a root path on Netlify.
+          mkdir -p web/dist/admin/scar4ever/admin
+          cp -r studio/dist/* web/dist/admin/scar4ever/admin/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
