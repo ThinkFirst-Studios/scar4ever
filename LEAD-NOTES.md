@@ -107,6 +107,8 @@ Current setup is a stopgap, not the final one:
 
 ⚠️ Known quirk on the preview host: the Studio's router re-applies its basePath, so URLs look like `/scar4ever/admin/scar4ever/admin/structure`. The app works; a refreshed deep link is caught by `web/public/404.html` and sent back to `/admin/`. Goes away once the admin is served from a root path (Netlify `scar4ever.com/admin` or an `admin.` subdomain).
 
+⚠️ **Admin cache problem on GitHub Pages:** each studio deploy renames its JS chunks and deletes the old ones, but Pages keeps serving the cached `admin/index.html` for up to 10 min → "Import error: An error occurred during dynamic import" until a hard refresh. Pages allows no cache headers, so this only goes away on Netlify (`Cache-Control: no-store` for `/admin/index.html`, long cache for its hashed assets). **Fix this before Stephanie is invited.**
+
 **At launch, replace all of it with Netlify:**
 1. Connect the repo in Netlify (config already in `netlify.toml`).
 2. Swap the Sanity webhook to Netlify's build hook URL (no token needed).
