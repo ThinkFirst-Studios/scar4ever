@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
 
 export const GROUPS = [
   {title: 'Photography', value: 'photography'},
@@ -12,7 +13,9 @@ export default defineType({
   name: 'service',
   title: 'Service',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({type: 'service'}),
     defineField({name: 'title', title: 'Service name', type: 'string', validation: (r) => r.required()}),
     defineField({
       name: 'group',

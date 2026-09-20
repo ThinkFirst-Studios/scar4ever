@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
 
 export const CATEGORIES = [
   {title: 'Photo & Styling', value: 'photo'},
@@ -11,7 +12,9 @@ export default defineType({
   name: 'portfolioItem',
   title: 'Portfolio piece',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({type: 'portfolioItem'}),
     defineField({
       name: 'title',
       title: 'Title (client or project name)',
