@@ -29,8 +29,11 @@ let changed = 0
 for (const file of files) {
   const before = fs.readFileSync(file, 'utf8')
   const after = before
-    .replace(/(href|src)="\/(?!\/)/g, `$1="${prefix}/`)
-    .replace(/srcset="\/(?!\/)/g, `srcset="${prefix}/`)
+    .replace(/(href|src|poster|content)="\/(?!\/)/g, `$1="${prefix}/`)
+    // srcset holds several urls: "/a.webp 720w, /b.webp 1080w"
+    .replace(/srcset="([^"]*)"/g, (all, list) =>
+      `srcset="${list.replace(/(^|,\s*)\/(?!\/)/g, (_m, sep) => `${sep}${prefix}/`)}"`,
+    )
   if (after !== before) {
     fs.writeFileSync(file, after)
     changed++
