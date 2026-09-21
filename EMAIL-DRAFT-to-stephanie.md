@@ -30,22 +30,20 @@ All PSMD content is off, so scar4ever stands on its own while you build PSMD sep
 
 1. **Your original photos.** Your current portfolio pages only give me flattened images, so I can't pull anything usable from them. Full-resolution files, grouped by project if you can — Dropbox, Drive or WeTransfer all work. Right now each project shows a single thumbnail; with the real files each one becomes a proper gallery.
 
-2. **Do you want years on your work?** Your current site doesn't show them, so this is your call. Some people like it because it shows range and a history; others would rather the work just stand on its own. If you want them, send me the years and I'll add them. If not, I'll take that line off completely — no problem either way.
+2. **Three credits to confirm**, if you can: the Dai Media cover, Bawse Beauty World, and the tee with the character cards on the back — who was that one for?
 
-3. **Three credits to confirm**, if you can: the Dai Media cover, Bawse Beauty World, and the tee with the character cards on the back — who was that one for?
+3. **The New Era × Bella Doña × Betty Boop work.** It's on the site now and it's the first thing people see. Are you okay showing it publicly, and does anyone need to approve it?
 
-4. **The New Era × Bella Doña × Betty Boop work.** It's on the site now and it's the first thing people see. Are you okay showing it publicly, and does anyone need to approve it?
+4. **Instagram posts.** I've set it up so specific posts you choose appear on the homepage. Of the three I tested, only one would embed — Instagram blocks certain posts, usually Reels. Send me 4 to 6 regular photo posts you'd like featured and I'll check which ones work.
 
-5. **Instagram posts.** I've set it up so specific posts you choose appear on the homepage. Of the three I tested, only one would embed — Instagram blocks certain posts, usually Reels. Send me 4 to 6 regular photo posts you'd like featured and I'll check which ones work.
-
-6. **How booking works for you today.** You want clients to pick a date, sign a contract, then pay a deposit or in full. Your checkout already does the deposit-or-full part, so I mainly need to know:
+5. **How booking works for you today.** You want clients to pick a date, sign a contract, then pay a deposit or in full. Your checkout already does the deposit-or-full part, so I mainly need to know:
    - Do clients pick their own time somewhere, or is it all DMs right now?
    - Do you send a contract before a shoot, and through what?
    - Is Stripe handling deposits, balances, or both?
 
    Whatever's already working, I'll keep and connect to the new site. I'd only suggest something new for the gaps, and I'd price it out before you commit to anything.
 
-7. **One price question.** Your Ultimate Brand Identity Kit shows $1,000, but the description says $2,500 total with a 50% deposit. Which is right?
+6. **One price question.** Your Ultimate Brand Identity Kit shows $1,000, but the description says $2,500 total with a 50% deposit. Which is right?
 
 **What's next on my end**
 

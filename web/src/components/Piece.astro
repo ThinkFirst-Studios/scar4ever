@@ -17,8 +17,6 @@ const {width: w, height: h} = dims(item.image, width)
   <figcaption>
     <strong>{item.title}</strong>
     {item.subtext && <span>{item.subtext}</span>}
-    {item.year
-      ? <span>{item.year}</span>
-      : <span class="confirm">[CONFIRM] year</span>}
+    {item.year && <span>{item.year}</span>}
   </figcaption>
 </figure>
