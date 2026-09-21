@@ -1,51 +1,58 @@
-# Email draft — to Stephanie (not sent yet)
+# Email draft — to Stephanie (send 2026-09-21)
 
-**Subject:** Your new site — first look + a few things I need
+**Subject:** Your site — first look, and a few things I need from you
 
 ---
 
 Hi Stephanie,
 
-Your questionnaire answers were perfect, thank you. Here's where things are.
+Quick update on where your site is, and a short list of things I need from you to finish it.
 
-**Your site so far:** https://thinkfirststudios.github.io/scar4ever/
+**First look:** https://thinkfirststudios.github.io/scar4ever/
 
 That's a private preview — it isn't public and Google can't find it. Your current site at scar4ever.com is untouched and stays live until you've approved everything.
 
-What's in already: your brand colors and fonts, your logos, photography and content leading the way, "book a session" as the main thing people do, your portfolio (77 pieces), your services with prices, your manifesto, and your Instagram and YouTube. All PSMD content is off, so scar4ever stands on its own.
+**What's built so far**
 
-**Your admin:** https://thinkfirststudios.github.io/scar4ever/admin/
+- Your brand colors (#ff0087 and #feabda) and fonts — Archivo Black headings, Roboto Mono for everything else. No more lime green.
+- Your logos throughout.
+- Photography and content lead, graphic design after — and "book a session" is the main thing the site asks people to do.
+- Your portfolio: 77 pieces across Photo & Styling, Graphics, Logo Design and Merch, filterable.
+- Your services, with your real prices, packages and payment options, and the session terms in one place instead of repeated on every listing.
+- Your manifesto, with your own words.
+- A FOLLOW section with your Instagram and your latest YouTube video.
+- Affiliate links on their own page, linked from the footer, so you can add to it whenever.
+- Draft Terms of Service and Privacy Policy for you to review — they're marked DRAFT and I'll go through them with you before launch.
 
-This is the part I think you'll like. You can add portfolio pieces, upload photos, edit titles, drag things into the order you want, edit your services and prices, choose which Instagram posts show on the homepage, and pick the featured YouTube video. You hit Publish and the site updates a minute later — no waiting on me.
-
-I'll send you an invite from Sanity (that's the system behind your admin). Sign in with Google and you're in. It's free, nothing to install, works on your phone.
+All PSMD content is off, so scar4ever stands on its own while you build PSMD separately.
 
 **What I need from you**
 
-1. **Your original photos.** Your current portfolio pages only give me flattened images, so I can't pull anything usable. Full-resolution files, grouped by project if you can — Dropbox, Drive or WeTransfer all work. Right now each project shows one thumbnail; with the real files each becomes a proper gallery.
+1. **Your original photos.** Your current portfolio pages only give me flattened images, so I can't pull anything usable from them. Full-resolution files, grouped by project if you can — Dropbox, Drive or WeTransfer all work. Right now each project shows a single thumbnail; with the real files each one becomes a proper gallery.
 
-2. **Years for your projects**, and confirmation of a few client names: the Dai Media cover, Bawse Beauty World, and the tee with the character cards — who was that for? (You can also type these straight into your admin if that's easier.)
+2. **Years for your projects.** Every piece currently says "year TBC". Also, can you confirm three credits for me: the Dai Media cover, Bawse Beauty World, and the tee with the character cards on the back — who was that one for?
 
-3. **The New Era × Bella Doña × Betty Boop work.** It's on your site now and it leads the homepage. Are you OK to show it publicly, and does the brand need to approve?
+3. **The New Era × Bella Doña × Betty Boop work.** It's on the site now and it's the first thing people see. Are you okay showing it publicly, and does anyone need to approve it?
 
-4. **Instagram posts.** Two of the three we tried won't embed — Instagram blocks certain posts, usually Reels. Send me 4–6 regular photo posts you'd like featured and I'll check which ones work.
+4. **Instagram posts.** I've set it up so specific posts you choose appear on the homepage. Of the three I tested, only one would embed — Instagram blocks certain posts, usually Reels. Send me 4 to 6 regular photo posts you'd like featured and I'll check which ones work.
 
-5. **A YouTube video** to feature on the homepage.
-
-6. **How booking works for you today.** You said you want clients to pick a date, sign a contract, then pay a deposit or in full. Your checkout already does the deposit-or-full part, so I mainly need to know:
+5. **How booking works for you today.** You want clients to pick a date, sign a contract, then pay a deposit or in full. Your checkout already does the deposit-or-full part, so I mainly need to know:
    - Do clients pick their own time somewhere, or is it all DMs right now?
    - Do you send a contract before a shoot, and through what?
    - Is Stripe handling deposits, balances, or both?
-   Whatever's already working, I'll keep and connect. I'd only add something new for the gaps, and I'd price it before you commit.
 
-7. **One price question.** Your Ultimate Brand Identity Kit shows $1,000, but the description says $2,500 total with a 50% deposit. Which is right?
+   Whatever's already working, I'll keep and connect to the new site. I'd only suggest something new for the gaps, and I'd price it out before you commit to anything.
 
-**Two more things**
+6. **One price question.** Your Ultimate Brand Identity Kit shows $1,000, but the description says $2,500 total with a 50% deposit. Which is right?
 
-Since you don't use email on your domain, an address like hello@scar4ever.com is easy to set up whenever you want one. No rush.
+**What's next on my end**
 
-And yes — please do share your design process. I'd love that.
+- Finishing the contact form so enquiries land in your inbox.
+- Your admin — where you'll add portfolio pieces, upload photos, reorder your work, edit services and prices, pick Instagram posts and change the featured video, all yourself. I'm moving the site to its final hosting first so it's solid when you get it. I'll send the login in a day or two.
+- Then redirects, your Terms and Privacy, and launch.
 
 **On launch:** when you're happy with everything, pointing scar4ever.com at the new site is the last step. It takes a few minutes, I'll do it at a quiet time for you, your Squarespace site stays up until the switch, and I'll set up redirects so your existing links keep working.
+
+Take a look and tell me what you'd change — this is your site, and it's easier to adjust now than later.
 
 Alex
