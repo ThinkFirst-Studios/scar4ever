@@ -109,25 +109,28 @@ Open questions for Stephanie that came out of this:
 - All three Brand Identity Kit tiers ring up at **$1,000**, and the product title still reads "(CEO tier)" whichever package is picked. Her description says $2,500 total / 50% deposit. Which is right, and what separates BOSS from Orange?
 - `/designservices/p/social-media-management-packages` — the slug says *management* but it sells the *Content Kit*. If ongoing social management is a separate service, it isn't on the new site.
 
-## ⏳ INTERIM: rebuild plumbing (revisit before launch)
+## ✅ Hosting: migrated to Netlify (2026-09-22)
 
-Current setup is a stopgap, not the final one:
-- **GitHub Pages + Actions** builds the site; preview at https://thinkfirststudios.github.io/scar4ever/
-- **Sanity webhook → GitHub `repository_dispatch`** using a fine-grained PAT (Contents: read+write, this repo only). Publish → live in ~1–2 min.
-- ✅ Webhook verified working 2026-09-20 (Sanity → GitHub 204, build ~35s, live in ~1 min). The 15-minute cron fallback has been removed.
+Live preview: **https://scar4ever.netlify.app** · her admin: **https://scar4ever.netlify.app/admin**
+Both are `noindex`. scar4ever.com is still Squarespace and untouched.
 
-**Her admin is self-hosted at `/admin`** (Sanity's hosted deploy fails: the orderable-document-list plugin breaks `sanity schema extract`). Now: https://thinkfirststudios.github.io/scar4ever/admin/ → at launch: scar4ever.com/admin.
+What the move fixed, all of which GitHub Pages could not do:
+- **Admin cache bug.** Each studio build renames its JS chunks and deletes the old ones; a cached entry point then asks for chunks that are gone and the app dies with "error during dynamic import". `/admin/` is now served `no-store`, its hashed assets `immutable` for a year. ✅ verified.
+- **Doubled basePath.** The admin is at a root path now, so no more `/scar4ever/admin/scar4ever/admin/…` and no duplicate copy in the build. ✅ verified, deep links survive a refresh via the SPA rewrite.
+- **Contact form.** Posts to Netlify Forms over fetch, falling back to her email address if the request fails. Previously it validated and silently dropped every enquiry.
+- ✅ Sanity CORS: added `https://scar4ever.netlify.app` (with credentials), deleted the stale `https://thinkfirst-studios.github.io`.
 
-⚠️ Known quirk on the preview host: the Studio's router re-applies its basePath, so URLs look like `/scar4ever/admin/scar4ever/admin/structure`. The app works; a refreshed deep link is caught by `web/public/404.html` and sent back to `/admin/`. Goes away once the admin is served from a root path (Netlify `scar4ever.com/admin` or an `admin.` subdomain).
+### 🔴 ACTION: Alex, finish the Netlify side
+1. **Netlify → Forms** — confirm the `enquiry` form was detected, then add a notification so submissions email her (and you). Until this is set, submissions are only stored in the Netlify dashboard.
+2. **Sanity → API → Webhooks** — repoint the publish webhook at a Netlify **build hook** URL (no token needed), and widen its filter to include `instagramPost`, which it still excludes.
+3. **Revoke the GitHub PAT** and the Sanity `import` token once the webhook is switched.
+4. Retire the GitHub Pages deploy (`.github/workflows/deploy.yml`) and drop the `https://thinkfirststudios.github.io` CORS origin — it is still there only because her 2026-09-21 email links to that preview.
 
-⚠️ **Admin cache problem on GitHub Pages:** each studio deploy renames its JS chunks and deletes the old ones, but Pages keeps serving the cached `admin/index.html` for up to 10 min → "Import error: An error occurred during dynamic import" until a hard refresh. Pages allows no cache headers, so this only goes away on Netlify (`Cache-Control: no-store` for `/admin/index.html`, long cache for its hashed assets). **Fix this before Stephanie is invited.**
-
-**At launch, replace all of it with Netlify:**
-1. Connect the repo in Netlify (config already in `netlify.toml`).
-2. Swap the Sanity webhook to Netlify's build hook URL (no token needed).
-4. **Revoke the GitHub PAT** and the Sanity `import` token.
-5. Point scar4ever.com at Netlify (web records only, never MX).
-6. Add a CORS origin for the live domain and **remove the `https://thinkfirststudios.github.io` origin** (and any leftover `thinkfirst-studios` entry) (it allows credentialed requests from any page on that shared GitHub domain).
+### At launch
+- Point scar4ever.com at Netlify — **web records only, never MX**.
+- Add the live domain as a Sanity CORS origin.
+- Remove `noindex` from `web/src/layouts/Base.astro`, add redirects for her ~10 indexed Squarespace URLs.
+- ⚠️ Terms of Service and Privacy Policy are on the site marked DRAFT — review with her before any DNS change.
 
 ## 🔒 Sanity security rules (project `ouk6ju6k`, org `oaktpd857`)
 
