@@ -26,11 +26,17 @@
 # browser reuses a cached index.html it asks for chunks that no longer exist
 # and the app dies with "error during dynamic import". Never cache the entry
 # point; cache the hashed assets it names forever.
+# Headers match the REQUESTED path, not the rewritten one, so "/admin/" needs
+# its own rule — "/admin/index.html" is never what the browser asks for.
+[[headers]]
+  for = "/admin/"
+  [headers.values]
+    Cache-Control = "no-store, must-revalidate"
+
 [[headers]]
   for = "/admin/index.html"
   [headers.values]
     Cache-Control = "no-store, must-revalidate"
-    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/admin/static/*"
