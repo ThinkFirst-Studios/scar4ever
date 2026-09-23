@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro'
 import Piece from '../components/Piece.astro'
 import ServiceCard from '../components/ServiceCard.astro'
-import {getPortfolio, getServices, getSettings, getInstagramPosts, youtubeId, instagramCode} from '../lib/sanity.js'
+import {getPortfolio, getServices, getSettings, getInstagramPosts, youtubeId, instagramCode, img, dims} from '../lib/sanity.js'
 
 const [items, services, settings, igPosts] = await Promise.all([
   getPortfolio(),
@@ -10,7 +10,10 @@ const [items, services, settings, igPosts] = await Promise.all([
   getSettings(),
   getInstagramPosts(),
 ])
-const igEmbeds = igPosts.map((p) => ({...p, code: instagramCode(p.url)})).filter((p) => p.code).slice(0, 6)
+const igEmbeds = igPosts
+  .map((p) => ({...p, code: instagramCode(p.url)}))
+  .filter((p) => p.code || p.image)
+  .slice(0, 6)
 const featured = items.filter((i) => i.featured)
 const selected = (featured.length ? featured : items).slice(0, 8)
 const svcFeatured = services.filter((s) => s.featured && s.price)
@@ -126,14 +129,31 @@ const markets = settings?.markets || ['Honolulu HI', 'El Paso TX', 'Los Angeles 
     {igEmbeds.length > 0 ? (
       <ul class="ig-grid">
         {igEmbeds.map((post) => (
-          <li class="ig-grid__item">
-            <iframe
-              src={`https://www.instagram.com/p/${post.code}/embed/captioned`}
-              title={post.note || 'Instagram post'}
-              loading="lazy"
-              scrolling="no"
-              allowtransparency="true"
-            ></iframe>
+          <li class={`ig-grid__item${post.image ? ' ig-grid__item--photo' : ''}`}>
+            {post.image ? (
+              <a class="ig-card" href={post.url} target="_blank" rel="noopener">
+                <img
+                  src={img(post.image, 800)}
+                  width={dims(post.image, 800).width}
+                  height={dims(post.image, 800).height}
+                  alt={post.alt || post.caption || 'Instagram post by SCAR'}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="ig-card__bar">
+                  <span class="ig-card__caption">{post.caption || ig}</span>
+                  <span class="ig-card__go" aria-hidden="true">↗</span>
+                </span>
+              </a>
+            ) : (
+              <iframe
+                src={`https://www.instagram.com/p/${post.code}/embed/captioned`}
+                title={post.note || 'Instagram post'}
+                loading="lazy"
+                scrolling="no"
+                allowtransparency="true"
+              ></iframe>
+            )}
           </li>
         ))}
       </ul>

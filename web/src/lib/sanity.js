@@ -5,7 +5,9 @@ export const client = createClient({
   projectId: 'ouk6ju6k',
   dataset: 'production',
   apiVersion: '2024-10-01',
-  useCdn: true, // published content only — no token, nothing private
+  // false so a build right after she publishes never picks up cached content.
+  // Build-time only — visitors get static HTML, so there's no speed cost.
+  useCdn: false,
 })
 
 const builder = imageUrlBuilder(client)
@@ -63,7 +65,9 @@ export const getSettings = () =>
 
 export const getInstagramPosts = () =>
   client.fetch(
-    `*[_type == "instagramPost" && hidden != true] | order(orderRank asc){_id, url, note}`,
+    `*[_type == "instagramPost" && hidden != true] | order(orderRank asc){
+      _id, url, note, image, alt, caption
+    }`,
   )
 
 /** Pull the shortcode out of any Instagram post/reel link */
