@@ -13,7 +13,7 @@ Live preview: https://scar4ever.netlify.app · Her admin: https://scar4ever.netl
       - Still not there after that → tell Claude, don't keep redeploying.
 - [ ] Edit the email notification → change recipient to **your own address** for now.
 - [ ] Tell Claude "test the form" → it submits one real enquiry → you confirm it hits your inbox.
-- [ ] Once confirmed, add a **second** notification for `contact.scarmosttdope@gmail.com`
+- [ ] Once confirmed, add a **second** notification for `scarmosttdope@gmail.com`
       (one recipient per notification — it's two entries, not a comma-separated list).
 
 > Why yours first: a test enquiry would otherwise land in her inbox unannounced,
@@ -24,7 +24,7 @@ Live preview: https://scar4ever.netlify.app · Her admin: https://scar4ever.netl
 ## 2 · Invite her to the admin  (5 min)
 
 - [ ] sanity.io/manage → scar4ever.com → **Members** → Invite
-- [ ] `contact.scarmosttdope@gmail.com` — role **Editor**, not Administrator
+- [ ] `scarmosttdope@gmail.com` — role **Editor**, not Administrator
 - [ ] She signs in with Google. Free, nothing to install, her seat costs nothing (free plan allows 20 users).
 
 **This is the thing you promised her "in a day or two" on Sept 21. It's due today.**
@@ -39,7 +39,9 @@ says the contact form is still being finished, and says the admin is still comin
 - [ ] Ask Claude to rewrite it. It needs to cover:
       - New link + her admin login (watch for the Sanity invite)
       - **Questions that have piled up:**
-        - Which inbox should website enquiries go to? (assuming contact.scarmosttdope@)
+        - Her site publishes contact.scarmosttdope@ but she emails from
+          scarmosttdope@ — which does she actually check? Notifications currently
+          go to scarmosttdope@, the one she replies from.
         - Brand Identity Kit: all three tiers ring up at $1,000, but her description
           says $2,500 with a 50% deposit. Which is right? What separates BOSS from Orange?
         - Her product title still reads "(CEO tier)" whichever package is picked.

@@ -109,6 +109,15 @@ Open questions for Stephanie that came out of this:
 - All three Brand Identity Kit tiers ring up at **$1,000**, and the product title still reads "(CEO tier)" whichever package is picked. Her description says $2,500 total / 50% deposit. Which is right, and what separates BOSS from Orange?
 - `/designservices/p/social-media-management-packages` — the slug says *management* but it sells the *Content Kit*. If ongoing social management is a separate service, it isn't on the new site.
 
+## 📧 Her two email addresses — don't mix them up
+
+- **`scarmosttdope@gmail.com`** — the one she actually uses. She replied to the
+  questionnaire from it on 2026-09-18. Use this for the Sanity invite, form
+  notifications, and anything that needs to reach her.
+- **`contact.scarmosttdope@gmail.com`** — the one published on her Squarespace
+  site. It is what the new site displays and what is stored in her admin under
+  Site settings. No evidence she reads it. Confirm before launch.
+
 ## ✅ Hosting: migrated to Netlify (2026-09-22)
 
 Live preview: **https://scar4ever.netlify.app** · her admin: **https://scar4ever.netlify.app/admin**
@@ -146,7 +155,7 @@ Free plan = **public dataset**. Anyone with the project ID can read all document
 ## 🔴 ACTION: mention the admin login in the email to Stephanie
 
 She needs a **free Sanity account** to use her admin — it isn't a username/password we hand over.
-How it works: we invite `contact.scarmosttdope@gmail.com` from the project's **Members** tab → she gets an email → she signs up (Google sign-in is the easiest) → she lands in her admin.
+How it works: we invite `scarmosttdope@gmail.com` from the project's **Members** tab → she gets an email → she signs up (Google sign-in is the easiest) → she lands in her admin.
 Say in the email: "You'll get an invite from Sanity — that's the login for your website admin. Sign in with Google and you're in. It's free and there's nothing to install."
 Free plan allows up to 20 users, so her seat costs nothing.
 
