@@ -91,10 +91,23 @@ Every one of these was verified on her live site on 2026-09-16.
 
 ---
 
-## 🔴 ACTION: Alex to send the remaining variant prices
+## ✅ DONE: variant prices (all 20, verified at her checkout 2026-09-22)
 
-Select each option at checkout on her live store and screenshot the price that appears:
-Brand Identity Kit (BOSS, Orange) · Logo Design (one single logo, pay in full) · Website (half payment, pay in full) · Content Kit (5 posts, 10 posts, 5 Reels/TikToks, 10 Reels/TikToks) · Instagram Post/Flyer (3 day, 2 day, next day rush).
+Every option on the services page now carries a real price — no `[CONFIRM] price` tags left.
+
+| Service | Options |
+|---|---|
+| All 7 photo sessions + Content Session | Deposit only from $150 · Pay in full $580 |
+| MosttDope Website | Deposit $550 · Half $1,750 · Pay in full $3,500 |
+| Ultimate Brand Identity Kit | CEO $1,000 · BOSS $1,000 · Orange $1,000 |
+| Logo Design | One single logo $600 · Package deposit from $550 · Pay in full $1,200 |
+| Social Media Content Kit | 5 posts $750 · 10 posts $1,500 · 5 Reels/TikToks $1,250 · 10 Reels/TikToks $2,500 |
+| Instagram Post / Flyer | No rush $125 · 3 day $150 · 2 day $175 · Next day $200 |
+| Sticker Pack Design | $200 |
+
+Open questions for Stephanie that came out of this:
+- All three Brand Identity Kit tiers ring up at **$1,000**, and the product title still reads "(CEO tier)" whichever package is picked. Her description says $2,500 total / 50% deposit. Which is right, and what separates BOSS from Orange?
+- `/designservices/p/social-media-management-packages` — the slug says *management* but it sells the *Content Kit*. If ongoing social management is a separate service, it isn't on the new site.
 
 ## ⏳ INTERIM: rebuild plumbing (revisit before launch)
 
