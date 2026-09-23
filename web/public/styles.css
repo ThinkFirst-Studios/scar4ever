@@ -742,6 +742,9 @@ figcaption strong {
 .form [aria-invalid="true"] { border-color: var(--red); }
 .form .btn { justify-self: start; border: 0; cursor: pointer; }
 .form__status { margin: 0; min-height: 1.5em; }
+/* Honeypot: only a bot filling forms blind will ever see this. */
+.form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form .btn[disabled] { opacity: .55; cursor: wait; }
 
 /* ---------- services page detail ---------- */
 .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }

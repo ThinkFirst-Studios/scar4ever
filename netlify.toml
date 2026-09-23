@@ -1,7 +1,60 @@
+# Netlify builds both the site and her admin, and serves them from one root:
+#   /        the site        (web/  → Astro)
+#   /admin   her Sanity CMS  (studio/ → sanity build)
+#
+# Unlike GitHub Pages this is a root path, so there is no ASTRO_BASE prefix
+# and no basePath doubling — web/scripts/rebase.mjs no-ops without a prefix.
+
 [build]
-  base = "web"
-  command = "npm run build"
-  publish = "dist"
+  publish = "web/dist"
+  command = """
+    cd web && npm ci && npm run build && cd ../studio && npm ci && npx sanity build --no-minify && mkdir -p ../web/dist/admin && cp -r dist/. ../web/dist/admin/
+  """
 
 [build.environment]
   NODE_VERSION = "22"
+  SANITY_STUDIO_BASEPATH = "/admin"
+
+# The admin is a single-page app: every deep link is handled in the browser,
+# so serve its entry point rather than a 404.
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Each studio build renames its JS chunks and deletes the old ones. If a
+# browser reuses a cached index.html it asks for chunks that no longer exist
+# and the app dies with "error during dynamic import". Never cache the entry
+# point; cache the hashed assets it names forever.
+[[headers]]
+  for = "/admin/index.html"
+  [headers.values]
+    Cache-Control = "no-store, must-revalidate"
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/admin/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Astro fingerprints everything under /_astro/, so it can be cached hard.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# These two are referenced with a ?v= query, so a rebuild busts them anyway.
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

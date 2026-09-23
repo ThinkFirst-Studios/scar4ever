@@ -29,7 +29,20 @@ const bookingUrl = settings?.bookingUrl
   </div>
 
   <div class="contact__grid">
-    <form class="form" id="enquiry" novalidate>
+    <form
+      class="form"
+      id="enquiry"
+      name="enquiry"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="company"
+      novalidate
+    >
+      {/* Netlify needs the form name in the body; the honeypot catches bots. */}
+      <input type="hidden" name="form-name" value="enquiry" />
+      <p class="form__hp" aria-hidden="true">
+        <label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label>
+      </p>
       <div class="form__row">
         <label for="f-name">Name</label>
         <input id="f-name" name="name" type="text" autocomplete="name" required>

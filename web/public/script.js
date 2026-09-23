@@ -64,11 +64,15 @@
     if (e.key === 'Escape' && bar.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
   });
 
-  // Enquiry form — mockup only, no handler connected yet
+  // Enquiry form — posts to Netlify Forms, which emails her the submission.
+  // Submitting over fetch keeps her on the page instead of bouncing to a
+  // generic success screen. If the request fails we fall back to mailto so an
+  // enquiry is never silently lost.
   const form = document.getElementById('enquiry');
   if (form) {
     const status = document.getElementById('form-status');
-    form.addEventListener('submit', e => {
+    const button = form.querySelector('[type="submit"]');
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       let firstBad = null;
       form.querySelectorAll('[required]').forEach(f => {
@@ -81,7 +85,28 @@
         firstBad.focus();
         return;
       }
-      status.innerHTML = 'Looks good. <span class="confirm">[CONFIRM] form handler — not connected in this mockup</span>';
+
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+          body: new URLSearchParams(new FormData(form)).toString(),
+        });
+        if (!res.ok) throw new Error(res.status);
+        form.reset();
+        status.textContent = 'Got it. I’ll get back to you within a couple of days.';
+      } catch (err) {
+        // Reuse the address already on the page so this never goes stale when
+        // she changes her contact email in the admin.
+        const link = document.querySelector('.contact__email a');
+        status.innerHTML = link
+          ? 'That didn’t send. Email me directly at ' + link.outerHTML + '.'
+          : 'That didn’t send. Please try again in a moment.';
+      } finally {
+        button.disabled = false;
+      }
     });
   }
 
